@@ -2,32 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Careers at CodeLogicAI – Work on Real Automations</title>
+  <title>Careers – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  
-<style>
+  <meta
+    name="description"
+    content="Join CodeLogicAI — a small, fast-moving automation studio building AI bots for SMBs, healthcare, and agencies."
+  />
+
+  <style>
     :root {
-      --bg: #050816;
-      --bg-alt: #0b1020;
-      --accent: #5b8cff;
-      --accent-soft: rgba(91, 140, 255, 0.15);
-      --text: #f7f7ff;
-      --muted: #b3b7d0;
-      --danger: #ff5c7a;
-      --card: #101529;
-      --border: #20263c;
+      --bg: #021430;
+      --bg-alt: #032341;
+      --accent: #1fd4ff;
+      --accent-soft: rgba(31, 212, 255, 0.18);
+      --text: #f9fafb;
+      --muted: #c7d2fe;
+      --card: rgba(10, 23, 50, 0.96);
+      --border: rgba(148, 163, 184, 0.45);
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
     }
 
     body {
-      background: radial-gradient(circle at top, #111a3a 0, #050816 50%, #02040a 100%);
+      background: radial-gradient(circle at top, #0c3570 0, #021430 55%, #020617 100%);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -35,181 +37,298 @@
 
     a { color: inherit; text-decoration: none; }
 
-    .page { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
 
+    /* Header */
     header {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; margin-bottom: 40px; flex-wrap: wrap;
-    }
-    .logo { display: flex; align-items: center; gap: 10px; }
-    .logo-mark {
-      width: 34px; height: 34px; border-radius: 999px;
-      background: conic-gradient(from 140deg, #5b8cff, #7c5cff, #ff5c7a, #5b8cff);
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; font-weight: 700; font-size: 18px;
-      box-shadow: 0 0 18px rgba(91, 140, 255, 0.7);
-    }
-    .logo-text { display: flex; flex-direction: column; }
-    .logo-text span:first-child { font-weight: 700; letter-spacing: 0.03em; }
-    .logo-text span:last-child { font-size: 12px; color: var(--muted); }
-
-    .header-cta { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
-
-    .pill {
-      border-radius: 999px; padding: 4px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(3, 7, 18, 0.65);
-      display: inline-flex; align-items: center; gap: 6px;
-    }
-    .dot-green {
-      width: 7px; height: 7px; border-radius: 999px;
-      background: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 16px;
+      flex-wrap: wrap;
     }
 
-    .nav { display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; }
-    .nav a {
-      padding: 4px 10px; border-radius: 999px; color: var(--muted);
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      background: rgba(15, 23, 42, 0.8);
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .nav a:hover { color: var(--text); border-color: rgba(148, 163, 184, 0.5); }
 
-    main { display: block; }
-
-    .section { margin-top: 32px; }
-    .section h2 { font-size: 22px; margin-bottom: 6px; }
-    .section p.section-sub { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
-
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-    @media (max-width: 880px) { .grid-3 { grid-template-columns: 1fr; } }
-
-    .card {
-      background: var(--card); border-radius: 16px; border: 1px solid var(--border);
-      padding: 12px 12px 14px; font-size: 13px;
+    .logo-img {
+      height: 46px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
     }
-    .card h3 { font-size: 14px; margin-bottom: 6px; }
-    .card p { color: var(--muted); margin-bottom: 6px; }
 
-    .how-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
-    @media (max-width: 880px) { .how-steps { grid-template-columns: 1fr; } }
-    .how-step {
-      font-size: 13px; background: rgba(15, 23, 42, 0.9); border-radius: 14px;
-      border: 1px dashed rgba(148, 163, 184, 0.4); padding: 9px 10px;
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
     }
-    .how-step span { font-size: 11px; color: var(--muted); }
 
-    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-    .pill-row span {
-      font-size: 11px; padding: 3px 8px; border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(55, 65, 81, 0.8);
+    .logo-text span:first-child {
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 0.03em;
+    }
+
+    .logo-text span:last-child {
+      font-size: 12px;
       color: var(--muted);
     }
 
-    .pricing { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 12px; }
-    @media (max-width: 880px) { .pricing { grid-template-columns: 1fr; } }
-
-    .price-card {
-      background: rgba(15, 23, 42, 0.98); border-radius: 16px; border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 12px 12px 14px; font-size: 13px;
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    .price-tag { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-    .price-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
 
-    ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 12px; }
-    ul li + li { margin-top: 2px; }
-
-    .btn-primary, .btn-secondary {
-      border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 500;
-      border: 1px solid transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+    .nav a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      border: 1px solid rgba(148,163,184,0.45);
+      background: rgba(12,20,48,0.95);
     }
+
+    .nav a:hover {
+      background: rgba(15,23,42,1);
+      color: var(--text);
+      border-color: rgba(191,219,254,0.9);
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 36px;
+    }
+
+    .section h1 {
+      font-size: clamp(30px, 4vw, 38px);
+      margin-bottom: 10px;
+      line-height: 1.1;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    /* Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 760px) {
+      .card-grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 16px 16px 18px;
+      box-shadow: 0 10px 22px rgba(15,23,42,0.6);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
     .btn-primary {
-      background: linear-gradient(135deg, #5b8cff, #7c5cff); color: #fff;
-      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #1fd4ff, #38bdf8);
+      color: #0f172a;
+      font-weight: 600;
+      box-shadow: 0 12px 26px rgba(56,189,248,0.45);
+      text-decoration: none;
+      font-size: 14px;
     }
-    .btn-secondary {
-      background: rgba(15, 23, 42, 0.85); border-color: rgba(148, 163, 184, 0.3); color: var(--muted);
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 34px rgba(56,189,248,0.6);
     }
 
     footer {
-      margin-top: 40px; font-size: 12px; color: var(--muted);
-      display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: center;
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 12px;
+      flex-wrap: wrap;
     }
-    .footer-links a { font-size: 12px; color: var(--muted); margin-left: 10px; }
-</style>
 
+    .footer-links a {
+      margin-left: 10px;
+    }
+  </style>
 </head>
+
 <body>
   <div class="page">
-    
-<header>
-  <div class="logo">
-    <div class="logo-mark">CL</div>
-    <div class="logo-text">
-      <span>CodeLogicAI</span>
-      <span>AI bots for real-world businesses</span>
-    </div>
-  </div>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="bots.html">AI Bots</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-    <a href="careers.html">Careers</a>
-  </nav>
-
-  <div class="header-cta">
-    <div class="pill">
-      <span class="dot-green"></span>
-      <span>Now booking pilots for Q4</span>
-    </div>
-  </div>
-</header>
-
-    
-<main>
-  <section class="section">
-    <h2>Careers</h2>
-    <p class="section-sub">We’re a small, remote‑friendly team focused on deep work for a handful of clients.</p>
-
-    <div class="grid-3">
-      <div class="card">
-        <h3>How we work</h3>
-        <p>Async, focused, documented, and outcome‑driven.</p>
+    <header>
+      <div class="logo">
+        <img src="assets/Logo.png" class="logo-img" alt="CodeLogicAI Logo">
+        <div class="logo-text">
+          <span>CodeLogicAI</span>
+          <span>AI bots for real-world businesses</span>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Who we look for</h3>
-        <p>Builders who understand both tech and operations.</p>
-      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="bots.html">AI Bots</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="careers.html">Careers</a>
+      </nav>
+    </header>
 
-      <div class="card">
-        <h3>Current openings</h3>
-        <p>Not actively hiring yet, but we keep a list of great people.</p>
-        <p style="font-size:12px;color:var(--muted);margin-top:6px;">
-          Send an intro and links to <strong>careers@codelogicai.com</strong>.
+    <main>
+      <!-- HERO -->
+      <section class="section">
+        <div style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
+          Careers
+        </div>
+        <h1>Build the future of small-business automation.</h1>
+        <p class="section-sub">
+          CodeLogicAI is a tiny but fast-growing automation studio working across lead-gen,
+          healthcare, scheduling, and financial insights. We build bots that directly impact
+          the day-to-day operations of real businesses — not theoretical AI demos.
         </p>
+      </section>
+
+      <!-- ABOUT WORKING HERE -->
+      <section class="section">
+        <h2>What it’s like to work at CodeLogicAI</h2>
+        <p class="section-sub">
+          We’re low-ego, fast-moving, and focused on useful automation. No bloated teams,
+          no endless meetings — just shipping meaningful work.
+        </p>
+
+        <ul style="padding-left:18px;font-size:13px;color:var(--muted);">
+          <li>Fully remote (US-based preferred)</li>
+          <li>Work directly with founders & clients</li>
+          <li>Clear ownership and rapid iteration cycles</li>
+          <li>Hands-on with LLMs, workflows, and integrations</li>
+          <li>Flexible hours — results > time logged</li>
+        </ul>
+      </section>
+
+      <!-- OPEN ROLES -->
+      <section class="section">
+        <h2>Open Roles</h2>
+        <p class="section-sub">We’re building a small, senior generalist team. If you see yourself here, apply.</p>
+
+        <div class="card-grid">
+
+          <div class="card">
+            <h3>Automation Engineer (LLM + Integrations)</h3>
+            <p>
+              Build flows, integrations, and conversational logic using OpenAI, FastAPI,
+              Zapier, Make, and custom webhooks.
+            </p>
+            <a href="mailto:careers@codelogicai.org?subject=Automation%20Engineer%20Application" class="btn-primary">
+              Apply Now →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Frontend Developer (Web + Dashboard)</h3>
+            <p>
+              Work on client dashboards, admin utilities, and lightweight interfaces
+              using HTML/CSS/JS and optional React.
+            </p>
+            <a href="mailto:careers@codelogicai.org?subject=Frontend%20Developer%20Application" class="btn-primary">
+              Apply Now →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Bot Conversation Designer</h3>
+            <p>
+              Craft conversational flows, qualification logic, and friendly scripts
+              that convert leads reliably across industries.
+            </p>
+            <a href="mailto:careers@codelogicai.org?subject=Conversation%20Designer%20Application" class="btn-primary">
+              Apply Now →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Client Success Lead</h3>
+            <p>
+              Own onboarding, training, updates, and client wins. Help businesses get real
+              ROI from their automations.
+            </p>
+            <a href="mailto:careers@codelogicai.org?subject=Client%20Success%20Application" class="btn-primary">
+              Apply Now →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- GENERAL APPLICATION -->
+      <section class="section">
+        <h2>Don’t see the right role?</h2>
+        <p class="section-sub">
+          We’re always meeting talented builders, especially those with small-team energy.
+          If you want to be part of our early crew, send your background.
+        </p>
+
+        <a
+          href="mailto:careers@codelogicai.org?subject=General%20Application"
+          class="btn-primary"
+        >
+          Send a general application →
+        </a>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
       </div>
-    </div>
-  </section>
-</main>
+    </footer>
 
-    
-<footer>
-  <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-  </div>
-</footer>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </div>
 </body>
 </html>
