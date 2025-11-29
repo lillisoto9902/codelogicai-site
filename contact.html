@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact CodeLogicAI – Book a Call or Send a Message</title>
+  <title>Contact – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  
-<style>
+  <meta
+    name="description"
+    content="Contact CodeLogicAI to discuss AI bots for lead capture, scheduling, healthcare intake, and CFO insights."
+  />
+
+  <style>
     :root {
-      --bg: #050816;
-      --bg-alt: #0b1020;
-      --accent: #5b8cff;
-      --accent-soft: rgba(91, 140, 255, 0.15);
-      --text: #f7f7ff;
-      --muted: #b3b7d0;
-      --danger: #ff5c7a;
-      --card: #101529;
-      --border: #20263c;
+      --bg: #021430;
+      --bg-alt: #032341;
+      --accent: #1fd4ff;
+      --accent-soft: rgba(31, 212, 255, 0.16);
+      --text: #f9fafb;
+      --muted: #c7d2fe;
+      --danger: #fb7185;
+      --card: rgba(10, 23, 50, 0.96);
+      --border: rgba(148, 163, 184, 0.55);
+      --input-bg: rgba(15, 23, 42, 0.98);
     }
 
     * {
@@ -27,7 +31,7 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #111a3a 0, #050816 50%, #02040a 100%);
+      background: radial-gradient(circle at top, #0b2f63 0, #021430 55%, #020617 100%);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -35,205 +39,495 @@
 
     a { color: inherit; text-decoration: none; }
 
-    .page { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
 
+    /* Header + logo */
     header {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; margin-bottom: 40px; flex-wrap: wrap;
-    }
-    .logo { display: flex; align-items: center; gap: 10px; }
-    .logo-mark {
-      width: 34px; height: 34px; border-radius: 999px;
-      background: conic-gradient(from 140deg, #5b8cff, #7c5cff, #ff5c7a, #5b8cff);
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; font-weight: 700; font-size: 18px;
-      box-shadow: 0 0 18px rgba(91, 140, 255, 0.7);
-    }
-    .logo-text { display: flex; flex-direction: column; }
-    .logo-text span:first-child { font-weight: 700; letter-spacing: 0.03em; }
-    .logo-text span:last-child { font-size: 12px; color: var(--muted); }
-
-    .header-cta { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
-
-    .pill {
-      border-radius: 999px; padding: 4px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(3, 7, 18, 0.65);
-      display: inline-flex; align-items: center; gap: 6px;
-    }
-    .dot-green {
-      width: 7px; height: 7px; border-radius: 999px;
-      background: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
     }
 
-    .nav { display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; }
-    .nav a {
-      padding: 4px 10px; border-radius: 999px; color: var(--muted);
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      background: rgba(15, 23, 42, 0.8);
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .nav a:hover { color: var(--text); border-color: rgba(148, 163, 184, 0.5); }
 
-    main { display: block; }
-
-    .section { margin-top: 32px; }
-    .section h2 { font-size: 22px; margin-bottom: 6px; }
-    .section p.section-sub { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
-
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-    @media (max-width: 880px) { .grid-3 { grid-template-columns: 1fr; } }
-
-    .card {
-      background: var(--card); border-radius: 16px; border: 1px solid var(--border);
-      padding: 12px 12px 14px; font-size: 13px;
+    .logo-img {
+      height: 46px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
     }
-    .card h3 { font-size: 14px; margin-bottom: 6px; }
-    .card p { color: var(--muted); margin-bottom: 6px; }
 
-    .how-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
-    @media (max-width: 880px) { .how-steps { grid-template-columns: 1fr; } }
-    .how-step {
-      font-size: 13px; background: rgba(15, 23, 42, 0.9); border-radius: 14px;
-      border: 1px dashed rgba(148, 163, 184, 0.4); padding: 9px 10px;
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
     }
-    .how-step span { font-size: 11px; color: var(--muted); }
 
-    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-    .pill-row span {
-      font-size: 11px; padding: 3px 8px; border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(55, 65, 81, 0.8);
+    .logo-text span:first-child {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 17px;
+    }
+
+    .logo-text span:last-child {
+      font-size: 12px;
       color: var(--muted);
     }
 
-    .pricing { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 12px; }
-    @media (max-width: 880px) { .pricing { grid-template-columns: 1fr; } }
-
-    .price-card {
-      background: rgba(15, 23, 42, 0.98); border-radius: 16px; border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 12px 12px 14px; font-size: 13px;
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
     }
-    .price-tag { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-    .price-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
 
-    ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 12px; }
-    ul li + li { margin-top: 2px; }
+    .nav a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(12, 20, 48, 0.95);
+    }
 
-    .btn-primary, .btn-secondary {
-      border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 500;
-      border: 1px solid transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+    .nav a:hover {
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.98);
+      border-color: rgba(191, 219, 254, 0.9);
     }
-    .btn-primary {
-      background: linear-gradient(135deg, #5b8cff, #7c5cff); color: #fff;
-      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+
+    .header-cta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 13px;
+      color: var(--muted);
     }
+
+    .pill {
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(6, 17, 40, 0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dot-green {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
+    }
+
+    main { display: block; }
+
+    .section {
+      margin-top: 32px;
+    }
+
+    .section h1 {
+      font-size: clamp(30px, 4vw, 38px);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .section p.section-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    /* Layout */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 880px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 16px 16px 18px;
+      font-size: 13px;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.6);
+    }
+
+    .card h3 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Form */
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 14px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 720px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 13px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    input,
+    select,
+    textarea {
+      background: var(--input-bg);
+      border-radius: 10px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 8px 10px;
+      font-size: 13px;
+      color: var(--text);
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.7);
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .chip {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(7, 19, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.75);
+      color: var(--muted);
+    }
+
+    .btn-primary,
     .btn-secondary {
-      background: rgba(15, 23, 42, 0.85); border-color: rgba(148, 163, 184, 0.3); color: var(--muted);
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease,
+        background 0.12s ease,
+        border-color 0.12s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #1fd4ff, #38bdf8);
+      color: #0f172a;
+      box-shadow: 0 12px 26px rgba(56, 189, 248, 0.45);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 34px rgba(56, 189, 248, 0.6);
+    }
+
+    .btn-secondary {
+      background: rgba(15, 23, 42, 0.96);
+      border-color: rgba(148, 163, 184, 0.75);
+      color: var(--muted);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(15, 23, 42, 0.99);
+      border-color: rgba(191, 219, 254, 0.9);
+    }
+
+    .form-actions {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .hint {
+      font-size: 11px;
+      color: var(--muted);
     }
 
     footer {
-      margin-top: 40px; font-size: 12px; color: var(--muted);
-      display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: center;
+      margin-top: 40px;
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
     }
-    .footer-links a { font-size: 12px; color: var(--muted); margin-left: 10px; }
-</style>
 
+    .footer-links a {
+      font-size: 12px;
+      color: var(--muted);
+      margin-left: 10px;
+    }
+  </style>
 </head>
+
 <body>
   <div class="page">
-    
-<header>
-  <div class="logo">
-    <div class="logo-mark">CL</div>
-    <div class="logo-text">
-      <span>CodeLogicAI</span>
-      <span>AI bots for real-world businesses</span>
-    </div>
-  </div>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="bots.html">AI Bots</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-    <a href="careers.html">Careers</a>
-  </nav>
+    <header>
+      <div class="logo">
+        <img src="assets/Logo.png" alt="CodeLogicAI Logo" class="logo-img">
+        <div class="logo-text">
+          <span>CodeLogicAI</span>
+          <span>AI bots for real-world businesses</span>
+        </div>
+      </div>
 
-  <div class="header-cta">
-    <div class="pill">
-      <span class="dot-green"></span>
-      <span>Now booking pilots for Q4</span>
-    </div>
-  </div>
-</header>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="bots.html">AI Bots</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+        <a href="careers.html">Careers</a>
+      </nav>
 
-    
-<main>
-  <section class="section">
-    <h2>Contact</h2>
-    <p class="section-sub">Ready to explore a pilot? Book a call or send a message below.</p>
+      <div class="header-cta">
+        <div class="pill">
+          <span class="dot-green"></span>
+          <span>Typically replies within 1 business day</span>
+        </div>
+      </div>
+    </header>
 
-    <div style="margin: 10px 0 18px;">
-      <a href="https://cal.com/your-handle/15min" class="btn-primary" style="display:inline-flex;">Book a 15‑min strategy call →</a>
-    </div>
+    <main>
+      <!-- HERO -->
+      <section class="section">
+        <div style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
+          Contact
+        </div>
+        <h1>Let’s map your first automation.</h1>
+        <p class="section-sub">
+          Share a bit about your business, your leads, and your current tools. We’ll respond with
+          a simple recommendation — which bot to start with, rough pricing, and the next best step.
+        </p>
+      </section>
 
-    <div class="card">
-      <h3>Send us a message</h3>
-      <p style="margin-bottom:10px;color:var(--muted);">We usually reply within one business day.</p>
+      <!-- FORM + SIDEBAR -->
+      <section class="section">
+        <div class="grid-2">
+          <!-- FORM CARD -->
+          <div class="card">
+            <h3>Tell us about your setup</h3>
+            <p class="muted">
+              This isn’t a sales interrogation. Just enough detail so we can give you a useful answer on the first reply.
+            </p>
 
-      <form action="#" method="post">
-        <div style="display:grid;gap:8px;grid-template-columns:1fr 1fr;margin-bottom:8px;">
-          <div>
-            <label for="name" style="font-size:12px;">Name</label><br/>
-            <input id="name" name="name" type="text" style="width:100%;padding:6px 8px;border-radius:8px;border:1px solid var(--border);background:#020617;color:#e5e7eb;font-size:13px;">
+            <!-- NOTE: update the action to a real form endpoint later if you want -->
+            <form action="mailto:hello@codelogicai.org" method="post" enctype="text/plain">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" required />
+              </div>
+
+              <div class="field">
+                <label for="email">Business email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+
+              <div class="field">
+                <label for="company">Company name</label>
+                <input id="company" name="company" type="text" />
+              </div>
+
+              <div class="field">
+                <label for="website">Website (if any)</label>
+                <input id="website" name="website" type="url" placeholder="https://example.com" />
+              </div>
+
+              <div class="field">
+                <label for="industry">Industry</label>
+                <select id="industry" name="industry">
+                  <option value="">Select one</option>
+                  <option>Home services</option>
+                  <option>Healthcare / wellness</option>
+                  <option>Roofing / trades</option>
+                  <option>Trucking / logistics</option>
+                  <option>Retail / e-com</option>
+                  <option>Agency / marketing</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="leads">Monthly inbound leads</label>
+                <select id="leads" name="leads">
+                  <option value="">Select a range</option>
+                  <option>0–25</option>
+                  <option>26–100</option>
+                  <option>101–300</option>
+                  <option>300+</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label>What are you most interested in?</label>
+                <div class="chips">
+                  <span class="chip">MiniCRM Lead-Gen Bot</span>
+                  <span class="chip">CareClerk (Healthcare)</span>
+                  <span class="chip">SummitAI CFO</span>
+                  <span class="chip">Custom bot + training</span>
+                  <span class="chip">Not sure yet</span>
+                </div>
+              </div>
+
+              <div class="field full">
+                <label for="goal">#1 outcome you want</label>
+                <textarea
+                  id="goal"
+                  name="goal"
+                  placeholder="E.g., more booked jobs from web leads, fewer no-shows, clearer cash-flow visibility..."
+                ></textarea>
+              </div>
+
+              <div class="field full">
+                <label for="tools">Current tools (calendars, CRM, sheets, etc.)</label>
+                <textarea
+                  id="tools"
+                  name="tools"
+                  placeholder="E.g., Google Calendar, HubSpot, Google Sheets, Athena, etc."
+                ></textarea>
+              </div>
+
+              <div class="field full">
+                <label for="message">Anything else we should know?</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Context, deadlines, frustrations, or ideal outcomes — whatever helps."
+                ></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-primary">Send to CodeLogicAI →</button>
+                <a href="mailto:hello@codelogicai.org" class="btn-secondary">Or email us directly</a>
+                <span class="hint">We typically reply within 1 business day.</span>
+              </div>
+            </form>
           </div>
-          <div>
-            <label for="company" style="font-size:12px;">Company</label><br/>
-            <input id="company" name="company" type="text" style="width:100%;padding:6px 8px;border-radius:8px;border:1px solid var(--border);background:#020617;color:#e5e7eb;font-size:13px;">
+
+          <!-- SIDEBAR CARD -->
+          <div class="card">
+            <h3>What happens after you reach out?</h3>
+            <p class="muted">
+              We’ll quickly review your message and usually respond with:
+            </p>
+            <ul class="muted" style="padding-left:18px;margin-top:6px;font-size:13px;">
+              <li>A suggested bot (and why)</li>
+              <li>Whether Starter, Pro, or Scale makes sense</li>
+              <li>Whether you need a quick call or just an email plan</li>
+            </ul>
+
+            <p class="muted" style="margin-top:10px;">
+              If it’s clearly not the right fit, we’ll tell you that too — no long drip campaigns, no pressure.
+            </p>
+
+            <hr style="border:none;border-top:1px solid rgba(148,163,184,0.5);margin:14px 0;" />
+
+            <h3>Prefer to skip straight to a call?</h3>
+            <p class="muted">
+              You can book a 15-minute call to walk through your workflow live and see how a bot would plug in.
+            </p>
+
+            <a href="https://cal.com/your-handle/15min" class="btn-primary" style="margin-top:10px;">
+              Book a 15-min strategy call →
+            </a>
+
+            <p class="hint" style="margin-top:8px;">
+              We’ll usually map a simple starting flow and give you a 30-day ROI checkpoint to aim for.
+            </p>
           </div>
         </div>
+      </section>
+    </main>
 
-        <div style="display:grid;gap:8px;grid-template-columns:1fr 1fr;margin-bottom:8px;">
-          <div>
-            <label for="email" style="font-size:12px;">Email</label><br/>
-            <input id="email" name="email" type="email" style="width:100%;padding:6px 8px;border-radius:8px;border:1px solid var(--border);background:#020617;color:#e5e7eb;font-size:13px;">
-          </div>
-          <div>
-            <label for="phone" style="font-size:12px;">Phone (optional)</label><br/>
-            <input id="phone" name="phone" type="tel" style="width:100%;padding:6px 8px;border-radius:8px;border:1px solid var(--border);background:#020617;color:#e5e7eb;font-size:13px;">
-          </div>
-        </div>
+    <footer>
+      <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </footer>
 
-        <div style="margin-bottom:8px;">
-          <label for="message" style="font-size:12px;">What can we help with?</label><br/>
-          <textarea id="message" name="message" rows="5" style="width:100%;padding:6px 8px;border-radius:8px;border:1px solid var(--border);background:#020617;color:#e5e7eb;font-size:13px;"></textarea>
-        </div>
-
-        <button type="submit" class="btn-primary">Send message</button>
-      </form>
-
-      <p style="font-size:12px;color:var(--muted);margin-top:10px;">
-        Or email us at <strong>sales@codelogicai.com</strong>.
-      </p>
-    </div>
-  </section>
-</main>
-
-    
-<footer>
-  <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-  </div>
-</footer>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </div>
 </body>
 </html>
