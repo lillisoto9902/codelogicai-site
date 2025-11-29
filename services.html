@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AI Bots – CodeLogicAI</title>
+  <title>Services – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Explore CodeLogicAI's AI bots: MiniCRM Lead-Gen, CareClerk for healthcare, SummitAI CFO, and custom bots with team training."
+    content="CodeLogicAI offers AI bot implementation, MiniCRM lead-gen setups, healthcare intake automation, CFO visibility tools, and custom automation projects with training."
   />
 
   <style>
@@ -155,7 +155,6 @@
       margin-bottom: 16px;
     }
 
-    /* Cards & layout */
     .grid-2 {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -173,7 +172,8 @@
         flex-direction: column;
         align-items: flex-start;
       }
-      .grid-2, .grid-3 {
+      .grid-2,
+      .grid-3 {
         grid-template-columns: 1fr;
       }
     }
@@ -192,6 +192,18 @@
       margin-bottom: 6px;
     }
 
+    .label {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
     .pill-row {
       display: flex;
       flex-wrap: wrap;
@@ -206,18 +218,6 @@
       background: rgba(7, 19, 42, 0.95);
       border: 1px solid rgba(148, 163, 184, 0.75);
       color: var(--muted);
-    }
-
-    .label {
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
     }
 
     .list {
@@ -294,19 +294,6 @@
       color: var(--muted);
       margin-top: 4px;
     }
-
-    .bot-heading {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: baseline;
-      flex-wrap: wrap;
-    }
-
-    .bot-heading span {
-      font-size: 12px;
-      color: var(--muted);
-    }
   </style>
 </head>
 
@@ -336,248 +323,263 @@
       <div class="header-cta">
         <div class="pill">
           <span class="dot-green"></span>
-          <span>One studio, four core bot stacks</span>
+          <span>From idea → live automation</span>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- HERO -->
+      <!-- HERO / INTRO -->
       <section class="section">
         <div style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
-          Our AI bots
+          Services
         </div>
-        <h1>Pick the bot that matches your workflow today — and grow from there.</h1>
+        <h1>Services built around how your business actually runs.</h1>
         <p class="section-sub">
-          CodeLogicAI builds bots that actually plug into your day-to-day: lead-gen, healthcare intake,
-          and CFO visibility. Start with one focused automation, then layer on scheduling, CRM, and analytics.
+          Whether you’re just starting with one bot or rolling out automations across locations,
+          CodeLogicAI gives you a clear path: scope, build, connect, and iterate — with training so
+          your team isn’t left in the dark.
         </p>
 
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
           <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Book a 15-min bot walkthrough →
+            Book a 15-min services consult →
           </a>
-          <a href="pricing.html" class="btn-secondary">
-            View pricing & bundles
+          <a href="bots.html" class="btn-secondary">
+            View our core bots
           </a>
         </div>
       </section>
 
-      <!-- OVERVIEW GRID -->
+      <!-- IMPLEMENTATION PACKAGES -->
       <section class="section">
-        <h2>Bot lineup</h2>
+        <h2>Implementation packages</h2>
         <p class="section-sub">
-          These are our most-requested implementations. All can run on web chat, SMS/WhatsApp, and can
-          connect to CRMs, sheets, or your existing tools.
+          Start with a focused implementation: one bot, one workflow, one core outcome.
+          From there we can add channels, locations, and deeper integrations.
         </p>
 
         <div class="grid-2">
           <div class="card">
             <span class="label">Leads & bookings</span>
-            <div class="bot-heading">
-              <h3>MiniCRM Lead-Gen Bot</h3>
-              <span>For: home services, local businesses, agencies</span>
-            </div>
+            <h3>MiniCRM Lead-Gen Setup</h3>
             <p>
-              A conversational lead capture and booking bot that replaces slow forms and
-              missed messages. It asks qualifying questions, books time on your calendar,
-              and keeps leads warm with automated follow-ups.
+              For home services, agencies, and local businesses that need lead capture,
+              qualification, and bookings running on autopilot.
             </p>
             <ul class="list">
-              <li>Captures leads from web chat, socials, or SMS</li>
-              <li>Qualifies based on your custom questions</li>
-              <li>Books appointments directly to your calendar</li>
-              <li>Sends 0–72 hr follow-up nudges to reduce drop-off</li>
-              <li>Logs everything into MiniCRM or Google Sheets</li>
+              <li>Discovery session to map your funnel</li>
+              <li>Bot script & conversation design based on your offers</li>
+              <li>Integration into MiniCRM or Google Sheets</li>
+              <li>Calendar connection (where applicable)</li>
+              <li>Launch support + 30-day performance review</li>
             </ul>
             <div class="pill-row">
-              <span>Lead capture</span>
-              <span>Booking</span>
-              <span>Auto follow-ups</span>
-              <span>MiniCRM / Sheets</span>
+              <span>Leads in one place</span>
+              <span>Less manual chasing</span>
             </div>
           </div>
 
           <div class="card">
-            <span class="label">Healthcare & intake</span>
-            <div class="bot-heading">
-              <h3>CareClerk (Healthcare)</h3>
-              <span>For: clinics, practices, wellness, telehealth</span>
-            </div>
+            <span class="label">Healthcare workflows</span>
+            <h3>CareClerk Implementation</h3>
             <p>
-              A patient-facing assistant that helps with intake, FAQs, and reminders —
-              with PHI-aware guardrails. It doesn’t replace medical judgment; it just
-              keeps your lines clearer and your schedule more organized.
+              For clinics, practices, and wellness providers who want better patient
+              communication without overloading staff.
             </p>
             <ul class="list">
-              <li>Patient intake & triage-style questioning</li>
-              <li>Appointment requests and reschedules</li>
-              <li>Consent language before sensitive questions</li>
-              <li>Reminder and prep instructions for visits</li>
-              <li>Routing to staff via secure channels</li>
+              <li>Intake & triage flow mapping (non-diagnostic)</li>
+              <li>PHI-aware conversational design & consent language</li>
+              <li>Appointment request & reminder flows</li>
+              <li>Routing plan for sensitive messages</li>
+              <li>Team orientation on how and when to use the bot</li>
             </ul>
             <div class="pill-row">
-              <span>PHI-aware flows</span>
-              <span>Scheduling support</span>
-              <span>Reminders</span>
+              <span>Fewer phone bottlenecks</span>
+              <span>Clearer patient expectations</span>
             </div>
           </div>
         </div>
 
         <div class="grid-2" style="margin-top:18px;">
           <div class="card">
-            <span class="label">Finance & visibility</span>
-            <div class="bot-heading">
-              <h3>SummitAI CFO</h3>
-              <span>For: owners, operators, service businesses</span>
-            </div>
+            <span class="label">Finance visibility</span>
+            <h3>SummitAI CFO Setup</h3>
             <p>
-              A conversational “CFO sidekick” that turns your numbers into answers you
-              can actually use. It doesn’t replace an accountant — it makes your
-              decisions smarter between meetings.
+              For owners and operators who want clean, conversational visibility into
+              cash flow, runway, and key financial signals.
             </p>
             <ul class="list">
-              <li>Plain-language cash-flow summaries</li>
-              <li>Runway estimates and simple “what-if” scenarios</li>
-              <li>Invoice risk and aging nudges</li>
-              <li>Optional alerts via email or SMS</li>
-              <li>Works with exports from tools you already use</li>
+              <li>Connect or import your existing financial data (exports, reports, etc.)</li>
+              <li>Define key questions and recurring insights you want answered</li>
+              <li>Configure dashboards and summary views</li>
+              <li>Set up optional alert and check-in cadence</li>
+              <li>Walkthrough session so you know how to “talk to your numbers”</li>
             </ul>
             <div class="pill-row">
-              <span>Cash-flow clarity</span>
-              <span>AR follow-up cues</span>
-              <span>Owner-friendly dashboards</span>
+              <span>Fewer surprises</span>
+              <span>Owner-friendly insights</span>
             </div>
           </div>
 
           <div class="card">
-            <span class="label">Custom automations</span>
-            <div class="bot-heading">
-              <h3>Custom Bot + AI Training</h3>
-              <span>For: teams with unique workflows</span>
-            </div>
+            <span class="label">Custom automation</span>
+            <h3>Custom Bot & Workflow Project</h3>
             <p>
-              When you need something tailored — like multi-location logic,
-              internal knowledge bots, or blended support + sales flows — we design
-              a custom bot and train your team to run it.
+              For teams with unique processes, multi-location logic, or internal tooling
+              needs that don’t fit neatly into a template.
             </p>
             <ul class="list">
-              <li>Process mapping & strategy workshop</li>
-              <li>Custom flows, prompts, and guardrails</li>
-              <li>Integrations into your existing tools</li>
-              <li>Team training sessions and playbooks</li>
-              <li>Optional ongoing optimization & support</li>
+              <li>Process & systems mapping workshop</li>
+              <li>Custom bot design across one or more channels</li>
+              <li>Integrations into your stack (CRM, sheets, ticketing, etc.)</li>
+              <li>Playbooks and SOPs for your team</li>
+              <li>Optional ongoing optimization retainer</li>
             </ul>
             <div class="pill-row">
-              <span>Tailored logic</span>
-              <span>Internal tools</span>
-              <span>Team training</span>
+              <span>Tailored flows</span>
+              <span>Internal + external use cases</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- HOW WE IMPLEMENT BOTS -->
+      <!-- ONGOING SUPPORT & OPTIMIZATION -->
       <section class="section">
-        <h2>How a bot project works with CodeLogicAI</h2>
+        <h2>Ongoing support & optimization</h2>
         <p class="section-sub">
-          Every bot follows the same core process so you’re never guessing what happens next.
+          Bots aren’t “set and forget” — they get better as they learn from real conversations.
+          We offer structured ways to keep improving without overwhelming your team.
         </p>
 
         <div class="grid-3">
           <div class="card">
-            <h3>1. 60-second fit check</h3>
+            <span class="label">Light-touch</span>
+            <h3>Quarterly Tune-Up</h3>
             <p>
-              We start with a quick fit check: your industry, lead volume, and goals.
-              From there, we recommend a bot and scope — or tell you honestly if it’s not the right time.
+              Perfect if you’re comfortable day-to-day but want a deeper review every
+              quarter to catch blind spots.
             </p>
-            <div class="pill-row">
-              <span>Fast assessment</span>
-              <span>Clear next step</span>
-            </div>
+            <ul class="list">
+              <li>Conversation & funnel review</li>
+              <li>Identify drop-off points and confusion</li>
+              <li>Updated prompts and flows</li>
+              <li>Brief report of what changed and why</li>
+            </ul>
           </div>
+
           <div class="card">
-            <h3>2. Build & connect</h3>
+            <span class="label">Growth-focused</span>
+            <h3>Monthly Optimization</h3>
             <p>
-              We design the conversational flows, hook into your calendar/CRM or sheets,
-              and test on real or sample conversations before we go live.
+              For teams actively scaling ad spend, locations, or services — where
+              small conversion lifts matter a lot.
             </p>
-            <div class="pill-row">
-              <span>Flows & prompts</span>
-              <span>Integrations</span>
-              <span>Quality checks</span>
-            </div>
+            <ul class="list">
+              <li>Monthly reviews of performance metrics</li>
+              <li>A/B tests on key questions and offers</li>
+              <li>Refinements to follow-up and routing rules</li>
+              <li>Suggestions for new automations as patterns appear</li>
+            </ul>
           </div>
+
           <div class="card">
-            <h3>3. Launch, measure, iterate</h3>
+            <span class="label">Hands-on</span>
+            <h3>Fractional Automation Partner</h3>
             <p>
-              Once your bot is live, we watch the numbers and adjust: drop-off points,
-              confusing questions, and missed opportunities all get tuned out over time.
+              For teams that want CodeLogicAI “in the loop” — collaborating with your
+              ops, marketing, and leadership as things evolve.
             </p>
-            <div class="pill-row">
-              <span>Data-driven tweaks</span>
-              <span>30-day ROI checkpoint</span>
-            </div>
+            <ul class="list">
+              <li>Regular strategy syncs with your team</li>
+              <li>Experiment roadmap aligned with your goals</li>
+              <li>Priority updates and implementations</li>
+              <li>Documentation kept up-to-date as systems change</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- WHICH BOT IS RIGHT? -->
+      <!-- TRAINING & ENABLEMENT -->
       <section class="section">
-        <h2>Not sure which bot to start with?</h2>
+        <h2>Training & enablement</h2>
         <p class="section-sub">
-          Use this quick guide — or just book a call and we’ll walk you through the options.
+          Good automations feel invisible — your team just feels like their tools are finally
+          working with them. Training is how we get there.
         </p>
 
-        <div class="grid-3">
+        <div class="grid-2">
           <div class="card">
-            <h3>You’re drowning in messages</h3>
+            <span class="label">Team-ready</span>
+            <h3>Bot Playbooks & SOPs</h3>
             <p>
-              Missed calls, DMs, form fills, and “just checking in” emails.
-              You want more booked jobs without adding another person to the phone.
+              We create simple, repeatable guides so your staff knows exactly how to work
+              alongside your bots — and what not to do.
             </p>
             <ul class="list">
-              <li><strong>Best fit:</strong> MiniCRM Lead-Gen Bot</li>
-              <li>+ optional: calendar & CRM integration</li>
+              <li>One-page “cheat sheets” for frontline staff</li>
+              <li>How to hand off from bot → human smoothly</li>
+              <li>Escalation and override guidelines</li>
+              <li>FAQ for common “what if?” scenarios</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Your team is in healthcare</h3>
+            <span class="label">Workshops</span>
+            <h3>Live Training Sessions</h3>
             <p>
-              Patients need guidance and reminders, staff is overloaded,
-              and you need to be smart about what gets automated.
+              Interactive training for owners, managers, and staff to get comfortable
+              with your new workflows and dashboards.
             </p>
             <ul class="list">
-              <li><strong>Best fit:</strong> CareClerk</li>
-              <li>+ optional: secure routing & forms</li>
+              <li>Owner/leadership overview session</li>
+              <li>Staff walkthrough focused on daily tasks</li>
+              <li>Q&A and scenario practice</li>
+              <li>Recorded sessions for new hires</li>
             </ul>
           </div>
+        </div>
+      </section>
 
+      <!-- FIT / CTA -->
+      <section class="section">
+        <h2>Is CodeLogicAI the right fit for you?</h2>
+        <p class="section-sub">
+          We’re a good fit if you’re serious about improving how your business runs —
+          not just “trying AI because it’s trendy.”
+        </p>
+
+        <div class="grid-2">
           <div class="card">
-            <h3>You want clearer numbers</h3>
-            <p>
-              You’re not trying to be a CFO — you just want to know what’s coming,
-              what’s at risk, and what knobs to turn next.
-            </p>
+            <h3>Great fit if you:</h3>
             <ul class="list">
-              <li><strong>Best fit:</strong> SummitAI CFO</li>
-              <li>+ optional: recurring check-ins & alerts</li>
+              <li>Have real lead flow or patient volume (even if it’s messy)</li>
+              <li>Are open to adjusting processes, not just tech</li>
+              <li>Care about data quality and clear reporting</li>
+              <li>Want a partner who tells you what’s realistic — not just what’s possible</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Probably not a fit if you:</h3>
+            <ul class="list">
+              <li>Are just looking for a “set and forget” chatbot widget</li>
+              <li>Don’t have anyone who can own the process internally</li>
+              <li>Want automation with zero experimentation or learning</li>
             </ul>
           </div>
         </div>
 
         <p class="tagline">
-          If your situation doesn’t fit cleanly into one box, that’s usually where our custom
-          bot + training offers the most leverage.
+          If you’re somewhere in the middle, that’s okay — the first call is about figuring
+          out where automation can help, not forcing a fit.
         </p>
 
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
           <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Talk through bot options →
+            Talk about services & scope →
           </a>
           <a href="contact.html" class="btn-secondary">
-            Send details & get a plan
+            Send context & get a recommendation
           </a>
         </div>
       </section>
