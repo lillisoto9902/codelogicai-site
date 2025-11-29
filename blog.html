@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CodeLogicAI Blog – Playbooks & Updates</title>
+  <title>Blog – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  
-<style>
+  <meta name="description" content="Insights, updates, and AI innovations from CodeLogicAI LLC." />
+
+  <style>
     :root {
-      --bg: #050816;
-      --bg-alt: #0b1020;
-      --accent: #5b8cff;
-      --accent-soft: rgba(91, 140, 255, 0.15);
-      --text: #f7f7ff;
-      --muted: #b3b7d0;
-      --danger: #ff5c7a;
-      --card: #101529;
-      --border: #20263c;
+      --bg: #021430;
+      --accent: #1fd4ff;
+      --accent-soft: rgba(31, 212, 255, 0.15);
+      --text: #f9fafb;
+      --muted: #c7d2fe;
+      --card: rgba(10, 23, 50, 0.96);
+      --border: rgba(148, 163, 184, 0.55);
     }
 
     * {
@@ -27,189 +25,180 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #111a3a 0, #050816 50%, #02040a 100%);
+      background: radial-gradient(circle at top, #0b2f63 0, #021430 55%, #020617 100%);
       color: var(--text);
-      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
     }
 
     a { color: inherit; text-decoration: none; }
 
-    .page { max-width: 1100px; margin: 0 auto; padding: 24px 16px 80px; }
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
 
     header {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 16px; margin-bottom: 40px; flex-wrap: wrap;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; margin-bottom: 40px; gap: 16px;
     }
-    .logo { display: flex; align-items: center; gap: 10px; }
-    .logo-mark {
-      width: 34px; height: 34px; border-radius: 999px;
-      background: conic-gradient(from 140deg, #5b8cff, #7c5cff, #ff5c7a, #5b8cff);
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; font-weight: 700; font-size: 18px;
-      box-shadow: 0 0 18px rgba(91, 140, 255, 0.7);
+
+    .logo { display: flex; align-items: center; gap: 12px; }
+    .logo-img {
+      height: 46px; width: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
     }
     .logo-text { display: flex; flex-direction: column; }
-    .logo-text span:first-child { font-weight: 700; letter-spacing: 0.03em; }
+    .logo-text span:first-child { font-weight: 700; font-size: 17px; letter-spacing: 0.03em; }
     .logo-text span:last-child { font-size: 12px; color: var(--muted); }
 
-    .header-cta { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--muted); }
-
-    .pill {
-      border-radius: 999px; padding: 4px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(3, 7, 18, 0.65);
-      display: inline-flex; align-items: center; gap: 6px;
+    .nav {
+      display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px;
     }
-    .dot-green {
-      width: 7px; height: 7px; border-radius: 999px;
-      background: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
-    }
-
-    .nav { display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; }
     .nav a {
-      padding: 4px 10px; border-radius: 999px; color: var(--muted);
-      border: 1px solid rgba(148, 163, 184, 0.15);
-      background: rgba(15, 23, 42, 0.8);
+      padding: 6px 11px; border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(12, 20, 48, 0.95);
     }
-    .nav a:hover { color: var(--text); border-color: rgba(148, 163, 184, 0.5); }
-
-    main { display: block; }
+    .nav a:hover {
+      color: var(--text);
+      background: rgba(15, 23, 42, 0.98);
+      border-color: rgba(191, 219, 254, 0.9);
+    }
 
     .section { margin-top: 32px; }
-    .section h2 { font-size: 22px; margin-bottom: 6px; }
-    .section p.section-sub { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    .section h1 { font-size: clamp(30px,4vw,38px); margin-bottom: 10px; }
+    .section-sub { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
 
-    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-    @media (max-width: 880px) { .grid-3 { grid-template-columns: 1fr; } }
-
-    .card {
-      background: var(--card); border-radius: 16px; border: 1px solid var(--border);
-      padding: 12px 12px 14px; font-size: 13px;
-    }
-    .card h3 { font-size: 14px; margin-bottom: 6px; }
-    .card p { color: var(--muted); margin-bottom: 6px; }
-
-    .how-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
-    @media (max-width: 880px) { .how-steps { grid-template-columns: 1fr; } }
-    .how-step {
-      font-size: 13px; background: rgba(15, 23, 42, 0.9); border-radius: 14px;
-      border: 1px dashed rgba(148, 163, 184, 0.4); padding: 9px 10px;
-    }
-    .how-step span { font-size: 11px; color: var(--muted); }
-
-    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-    .pill-row span {
-      font-size: 11px; padding: 3px 8px; border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(55, 65, 81, 0.8);
-      color: var(--muted);
+    .post-card {
+      background: var(--card); padding: 20px;
+      border-radius: 16px; border: 1px solid var(--border);
+      margin-bottom: 24px; box-shadow: 0 10px 26px rgba(15,23,42,0.6);
     }
 
-    .pricing { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 12px; }
-    @media (max-width: 880px) { .pricing { grid-template-columns: 1fr; } }
+    .post-title { font-size: 22px; margin-bottom: 6px; }
+    .post-meta { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+    .post-body { font-size: 15px; line-height: 1.7; color: var(--text); }
 
-    .price-card {
-      background: rgba(15, 23, 42, 0.98); border-radius: 16px; border: 1px solid rgba(148, 163, 184, 0.4);
-      padding: 12px 12px 14px; font-size: 13px;
-    }
-    .price-tag { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-    .price-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 6px; }
-
-    ul { margin: 6px 0 0; padding-left: 18px; color: var(--muted); font-size: 12px; }
-    ul li + li { margin-top: 2px; }
-
-    .btn-primary, .btn-secondary {
-      border-radius: 999px; padding: 9px 16px; font-size: 14px; font-weight: 500;
-      border: 1px solid transparent; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease, border-color 0.12s ease;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, #5b8cff, #7c5cff); color: #fff;
-      box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
-    }
-    .btn-secondary {
-      background: rgba(15, 23, 42, 0.85); border-color: rgba(148, 163, 184, 0.3); color: var(--muted);
-    }
+    .post-body p { margin-bottom: 12px; }
+    .post-body strong { color: var(--accent); }
 
     footer {
       margin-top: 40px; font-size: 12px; color: var(--muted);
-      display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: center;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
     }
-    .footer-links a { font-size: 12px; color: var(--muted); margin-left: 10px; }
-</style>
-
+  </style>
 </head>
+
 <body>
-  <div class="page">
-    
-<header>
-  <div class="logo">
-    <div class="logo-mark">CL</div>
-    <div class="logo-text">
-      <span>CodeLogicAI</span>
-      <span>AI bots for real-world businesses</span>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="assets/Logo.png" alt="CodeLogicAI Logo" class="logo-img">
+      <div class="logo-text">
+        <span>CodeLogicAI</span>
+        <span>AI bots for real-world businesses</span>
+      </div>
     </div>
-  </div>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="bots.html">AI Bots</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-    <a href="careers.html">Careers</a>
-  </nav>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="bots.html">AI Bots</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+  </header>
 
-  <div class="header-cta">
-    <div class="pill">
-      <span class="dot-green"></span>
-      <span>Now booking pilots for Q4</span>
-    </div>
-  </div>
-</header>
-
-    
-<main>
+  <!-- BLOG HEADER -->
   <section class="section">
-    <h2>Blog</h2>
-    <p class="section-sub">Short, practical notes on AI automation, lead‑gen, and finance for owners and operators.</p>
-
-    <div class="grid-3">
-      <div class="card">
-        <h3>Recovering abandoned chats with follow‑ups</h3>
-        <p>How a simple 3‑step follow‑up flow can recover 20–30% of leads who stop replying.</p>
-        <p style="font-size:12px;color:var(--muted);">Coming soon</p>
-      </div>
-
-      <div class="card">
-        <h3>Using bots without burning your team out</h3>
-        <p>Where automation ends and the human touch should begin.</p>
-        <p style="font-size:12px;color:var(--muted);">Coming soon</p>
-      </div>
-
-      <div class="card">
-        <h3>CFO dashboards owners actually use</h3>
-        <p>What busy owners want at a glance — and what they ignore.</p>
-        <p style="font-size:12px;color:var(--muted);">Coming soon</p>
-      </div>
-    </div>
+    <h1>CodeLogicAI Blog</h1>
+    <p class="section-sub">Insights, updates, and innovation for small businesses adopting AI.</p>
   </section>
-</main>
 
-    
-<footer>
-  <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-  </div>
-</footer>
+  <!-- FIRST BLOG POST -->
+  <article class="post-card">
+    <h2 class="post-title">The Future Is Now: How CodeLogicAI LLC Is Transforming Small Business Through AI</h2>
+    <div class="post-meta">Published: <span id="blogDate"></span></div>
+
+    <div class="post-body">
+      <p>Artificial Intelligence isn’t a luxury anymore — it’s the backbone of modern business. At <strong>CodeLogicAI LLC</strong>, we build AI solutions that help companies operate smarter, faster, and more efficiently without the heavy costs or complexity often associated with tech adoption.</p>
+
+      <p><strong>Our mission is simple:</strong><br>
+      Make advanced AI accessible to every business, not just big corporations.</p>
+
+      <h3>Our Vision: AI Designed for Real People</h3>
+      <p>At CodeLogicAI LLC, we believe innovation should empower, not overwhelm. AI should support human creativity, reduce workload, and open new opportunities. Too many small and mid-sized businesses struggle with outdated systems, manual tasks, and the constant pressure to stay competitive. We’re here to change that.</p>
+
+      <p>Our vision is built around three core ideas:</p>
+      <ul class="post-body">
+        <li>AI should be affordable and customizable for businesses of all sizes.</li>
+        <li>Automation should eliminate stress — not create more.</li>
+        <li>Technology should amplify human potential, not replace it.</li>
+      </ul>
+
+      <p>We want every entrepreneur, service provider, and small business owner to have the tools they need to work smarter and grow faster.</p>
+
+      <h3>What We Deliver: Practical AI for Real-World Problems</h3>
+      <p>CodeLogicAI LLC specializes in building solutions that save time, cut costs, and increase productivity. Our core offerings include:</p>
+
+      <p>🚀 <strong>Intelligent AI Bots & Automations</strong><br>
+      From lead-generation bots to appointment schedulers, customer-service agents, and financial projection tools, our bots work 24/7 and plug directly into your workflow.</p>
+
+      <p>⚡ <strong>Custom CRM Systems</strong><br>
+      We design lightweight, efficient CRMs tailored to how your business actually operates. No clutter, no unnecessary menus — just streamlined tools that boost conversions and keep you organized.</p>
+
+      <p>📊 <strong>CFO & Financial Tools</strong><br>
+      Our SummitAI CFO Bot helps business owners see their financial future clearly with profit estimates, scenario planning, and spending analysis — all powered by intelligent automation.</p>
+
+      <p>🛠️ <strong>Custom Coding & System Development</strong><br>
+      We build high-performance FastAPI applications, backend automations, dashboards, and multi-bot ecosystems designed for scalability.</p>
+
+      <p>💡 <strong>Creative & Branding AI Tools</strong><br>
+      Need AI-powered marketing content, ads, scripts, or brand assets? We’ve got that covered too.</p>
+
+      <h3>Why Businesses Trust CodeLogicAI LLC</h3>
+      <p>Our approach combines business strategy with technical precision. Companies choose us because:</p>
+
+      <ul class="post-body">
+        <li>We build fast and efficiently.</li>
+        <li>Our systems reduce workload from day one.</li>
+        <li>We prioritize affordability without sacrificing quality.</li>
+        <li>We offer long-term support and evolution as your business grows.</li>
+        <li>Our AI acts like a dedicated team member — consistent and reliable.</li>
+      </ul>
+
+      <p>We don’t believe in one-size-fits-all software. Every tool we build is shaped around your needs, your industry, and your goals.</p>
+
+      <h3>Building the Future Together</h3>
+      <p>At CodeLogicAI LLC, we don’t just deliver code. We deliver clarity, growth, and freedom. Our purpose is to help you reclaim time, streamline operations, and compete confidently in a fast-moving world.</p>
+
+      <p><strong>The future is here. Let’s build it together.</strong></p>
+    </div>
+  </article>
+
+  <footer>
+    <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+    </div>
+  </footer>
+</div>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("blogDate").textContent = new Date().toLocaleDateString();
 </script>
 
-  </div>
 </body>
 </html>
+
