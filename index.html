@@ -8,17 +8,19 @@
     name="description"
     content="CodeLogicAI builds custom AI bots to capture leads, schedule appointments, update CRMs, and deliver CFO insights for small businesses."
   />
+
+  <!-- Light theme styles -->
   <style>
     :root {
-      --bg: #021430;
-      --bg-alt: #032341;
-      --accent: #1fd4ff;
-      --accent-soft: rgba(31, 212, 255, 0.18);
-      --text: #f9fafb;
-      --muted: #c7d2fe;
-      --danger: #fb7185;
-      --card: rgba(6, 16, 40, 0.96);
-      --border: rgba(148, 163, 184, 0.55);
+      --bg: #f3f4f6;
+      --bg-alt: #e5e7eb;
+      --accent: #0ea5e9;
+      --accent-soft: rgba(14, 165, 233, 0.12);
+      --text: #020617;
+      --muted: #6b7280;
+      --danger: #b91c1c;
+      --card: #ffffff;
+      --border: #e5e7eb;
     }
 
     * {
@@ -29,16 +31,13 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #0b2f63 0, #021430 55%, #020617 100%);
+      background: linear-gradient(to bottom, #f9fafb, #e5e7eb);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     .page {
       max-width: 1100px;
@@ -46,6 +45,7 @@
       padding: 24px 16px 80px;
     }
 
+    /* Header with logo */
     header {
       display: flex;
       align-items: center;
@@ -61,17 +61,11 @@
       gap: 12px;
     }
 
-    .logo-mark {
-      height: 46px;
-      width: 46px;
-      border-radius: 12px;
-      background: radial-gradient(circle at 30% 20%, #1fd4ff, #0050a4 45%, #020617 100%);
-      box-shadow: 0 0 20px rgba(31, 212, 255, 0.75);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 20px;
+    .logo-img {
+      height: 54px;
+      width: auto;
+      border-radius: 6px;
+      box-shadow: 0 0 12px rgba(14, 165, 233, 0.45);
     }
 
     .logo-text {
@@ -83,7 +77,7 @@
     .logo-text span:first-child {
       font-weight: 700;
       letter-spacing: 0.03em;
-      font-size: 17px;
+      font-size: 18px;
     }
 
     .logo-text span:last-child {
@@ -91,19 +85,12 @@
       color: var(--muted);
     }
 
-    .top-cta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
     .pill {
       padding: 6px 12px;
       border-radius: 999px;
       font-size: 12px;
       border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.8);
+      background: #ffffffdd;
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -148,36 +135,32 @@
 
     h1 {
       font-size: clamp(28px, 4vw, 36px);
-      line-height: 1.15;
+      line-height: 1.2;
       margin-bottom: 14px;
     }
 
     .gradient-text {
-      background: linear-gradient(to right, #1fd4ff, #60a5fa);
+      background: linear-gradient(to right, #0284c7, #0ea5e9);
       -webkit-background-clip: text;
       color: transparent;
     }
 
     .hero-sub {
-      font-size: 14px;
+      font-size: 15px;
       color: var(--muted);
       margin-bottom: 20px;
     }
 
-    .hero-sub strong {
-      color: var(--accent);
-      font-weight: 600;
-    }
+    .hero-sub strong { color: var(--accent); font-weight: 600; }
 
     .hero-cta-row {
       display: flex;
       gap: 12px;
-      flex-wrap: wrap;
       margin-bottom: 18px;
+      flex-wrap: wrap;
     }
 
-    .btn-primary,
-    .btn-outline {
+    .btn-primary, .btn-outline {
       border-radius: 999px;
       padding: 10px 18px;
       font-size: 14px;
@@ -190,34 +173,24 @@
     }
 
     .btn-primary {
-      background: linear-gradient(to right, #1fd4ff, #2563eb);
-      border-color: rgba(148, 163, 184, 0.7);
-      color: #020617;
-      box-shadow: 0 10px 30px rgba(15, 118, 210, 0.55);
+      background: linear-gradient(to right, #0ea5e9, #0284c7);
+      color: white;
+      border-color: rgba(148, 163, 184, 0.3);
+      box-shadow: 0 8px 22px rgba(14, 165, 233, 0.35);
     }
 
     .btn-outline {
-      background: rgba(15, 23, 42, 0.7);
-      border-color: rgba(148, 163, 184, 0.7);
+      background: white;
+      border-color: var(--border);
       color: var(--muted);
-    }
-
-    .hero-note {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .hero-note strong {
-      color: var(--accent);
-      font-weight: 600;
     }
 
     .right-panel {
       background: var(--card);
       border-radius: 18px;
-      padding: 18px 18px 16px;
+      padding: 18px;
       border: 1px solid var(--border);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -228,13 +201,7 @@
       justify-content: space-between;
       align-items: center;
       font-size: 13px;
-    }
-
-    .right-header span.label {
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
       color: var(--muted);
-      font-size: 11px;
     }
 
     .tag-row {
@@ -247,189 +214,151 @@
     .tag {
       padding: 4px 8px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border);
+      background: #f9fafb;
       color: var(--muted);
     }
 
     .cards {
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
       gap: 10px;
       font-size: 13px;
     }
 
     .card {
       border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      background: radial-gradient(circle at top left, var(--accent-soft), rgba(15, 23, 42, 0.96));
-      padding: 10px 11px;
+      border: 1px solid var(--border);
+      background: white;
+      padding: 12px;
       display: grid;
       grid-template-columns: auto 1fr auto;
-      gap: 8px;
+      gap: 10px;
       align-items: center;
     }
 
     .card-icon {
-      width: 22px;
-      height: 22px;
+      width: 26px;
+      height: 26px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.8);
+      border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 13px;
+      font-size: 14px;
+      background: #f0f9ff;
+      color: #0284c7;
     }
 
-    .card-text {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-    }
-
-    .card-title {
-      font-weight: 600;
-      font-size: 12px;
-    }
-
-    .card-sub {
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    .chip {
-      font-size: 11px;
-      padding: 3px 7px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--muted);
-    }
-
-    .foot-note {
-      font-size: 11px;
-      color: var(--muted);
-      text-align: right;
-      margin-top: 6px;
-    }
+    .card-title { font-weight: 600; color: #0f172a; }
+    .card-sub { font-size: 12px; color: var(--muted); }
 
     footer {
       margin-top: 32px;
-      font-size: 11px;
+      font-size: 12px;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
-      gap: 12px;
       flex-wrap: wrap;
-      border-top: 1px dashed rgba(148, 163, 184, 0.6);
+      gap: 12px;
+      border-top: 1px dashed var(--border);
       padding-top: 12px;
     }
 
-    footer a {
-      text-decoration: underline;
-      text-decoration-style: dotted;
-    }
+    footer a { text-decoration: underline dotted; }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
       <div class="logo">
-        <div class="logo-mark">CL</div>
+        <img src="logo.png" alt="CodeLogicAI logo" class="logo-img" />
         <div class="logo-text">
           <span>CodeLogicAI</span>
           <span>AI bots that actually do the work</span>
         </div>
       </div>
-      <div class="top-cta">
-        <div class="pill">
-          <span class="pill-dot"></span>
-          <span>New: <span class="accent">Lead, Scheduling & CFO bots</span></span>
-        </div>
+
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>New: <span class="accent">Lead, Scheduling & CFO bots</span></span>
       </div>
     </header>
 
     <main>
       <section class="hero">
         <div class="eyebrow">AI for small business</div>
+
         <h1>
           AI bots for <span class="gradient-text">leads, scheduling, and CFO insights</span> — done for you.
         </h1>
+
         <p class="hero-sub">
           We build and maintain AI bots that
           <strong>capture leads 24/7</strong>,
           <strong>book appointments</strong>,
-          <strong>update your CRM</strong>, and
-          <strong>send CFO-style reports</strong>
+          <strong>update your CRM</strong>,
+          and
+          <strong>send CFO-style summaries</strong>
           without you learning any tech.
         </p>
 
         <div class="hero-cta-row">
-          <a class="btn-primary" href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Bot%20Build%20Inquiry">
-            Book a free consult
-          </a>
-          <a class="btn-outline" href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Questions">
-            Ask a question
-          </a>
+          <a class="btn-primary" href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Bot%20Build%20Inquiry">Book a free consult</a>
+          <a class="btn-outline" href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Questions">Ask a question</a>
         </div>
-        <p class="hero-note">
-          <strong>No templates.</strong> We build bots around your offer, your tools, and your process.
-        </p>
       </section>
 
       <aside class="right-panel">
         <div class="right-header">
-          <span class="label">What we build</span>
-          <span>Done-for-you setup & support</span>
+          <span>What we build</span>
+          <span>Done-for-you support</span>
         </div>
 
         <div class="tag-row">
-          <span class="tag">Lead capture & qualification</span>
-          <span class="tag">Scheduling & reminders</span>
-          <span class="tag">CRM & inbox updates</span>
-          <span class="tag">CFO-style summaries</span>
+          <span class="tag">Lead capture</span>
+          <span class="tag">Qualification</span>
+          <span class="tag">Scheduling</span>
+          <span class="tag">CRM updates</span>
+          <span class="tag">Inbox sync</span>
+          <span class="tag">CFO-style insights</span>
         </div>
 
         <div class="cards">
           <div class="card">
             <div class="card-icon">💬</div>
-            <div class="card-text">
+            <div>
               <div class="card-title">Lead intake bots</div>
-              <div class="card-sub">Turn clicks into booked calls or warm leads automatically.</div>
+              <div class="card-sub">Turn clicks into booked calls automatically.</div>
             </div>
-            <div class="chip">24/7</div>
+            <div class="tag">24/7</div>
           </div>
 
           <div class="card">
             <div class="card-icon">📅</div>
-            <div class="card-text">
+            <div>
               <div class="card-title">Scheduling & reminders</div>
-              <div class="card-sub">Bots that respect your calendar rules and reduce no-shows.</div>
+              <div class="card-sub">Reduce no-shows with smart calendar rules.</div>
             </div>
-            <div class="chip">Fewer no-shows</div>
+            <div class="tag">Smart AI</div>
           </div>
 
           <div class="card">
             <div class="card-icon">📊</div>
-            <div class="card-text">
+            <div>
               <div class="card-title">CFO-style insights</div>
-              <div class="card-sub">Simple summaries of pipeline, activity, and revenue drivers.</div>
+              <div class="card-sub">Simple summaries of revenue drivers & pipeline.</div>
             </div>
-            <div class="chip">Clarity</div>
+            <div class="tag">Clarity</div>
           </div>
         </div>
 
-        <div class="foot-note">
-          Built and supported by humans. No “set it and vanish” nonsense.
-        </div>
       </aside>
     </main>
 
     <footer>
-      <span>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</span>
-      <span>
-        Ready to explore a bot for your business?
-        <a href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Project%20Inquiry">Email us to get started.</a>
-      </span>
+      <span>© <span id="year"></span> CodeLogicAI LLC</span>
+      <a href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Project%20Inquiry">Start a project</a>
     </footer>
   </div>
 
