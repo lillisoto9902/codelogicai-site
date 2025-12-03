@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CodeLogicAI – AI Bots for Leads, Scheduling & CFO Insights</title>
+  <title>CodeLogicAI – AI Bots, CRM Automation, CareClerk & AI Certification Bootcamp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="CodeLogicAI builds custom AI bots to capture leads, schedule appointments, update CRMs, and deliver CFO insights for small businesses."
+    content="CodeLogicAI builds custom AI bots for leads, CRM automation, scheduling, CFO insights, CareClerk for hospitals, plus AI Certification Bootcamps and fully managed bot hosting."
   />
 
-  <!-- Light theme styles -->
   <style>
     :root {
       --bg: #f3f4f6;
@@ -18,7 +17,6 @@
       --accent-soft: rgba(14, 165, 233, 0.12);
       --text: #020617;
       --muted: #6b7280;
-      --danger: #b91c1c;
       --card: #ffffff;
       --border: #e5e7eb;
     }
@@ -45,7 +43,7 @@
       padding: 24px 16px 80px;
     }
 
-    /* Header with logo */
+    /* HEADER */
     header {
       display: flex;
       align-items: center;
@@ -109,6 +107,7 @@
       font-weight: 600;
     }
 
+    /* LAYOUT */
     main {
       display: grid;
       grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
@@ -148,10 +147,24 @@
     .hero-sub {
       font-size: 15px;
       color: var(--muted);
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
-    .hero-sub strong { color: var(--accent); font-weight: 600; }
+    .hero-sub strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .hero-list {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 18px;
+      padding-left: 18px;
+    }
+
+    .hero-list li {
+      margin-bottom: 4px;
+    }
 
     .hero-cta-row {
       display: flex;
@@ -160,7 +173,8 @@
       flex-wrap: wrap;
     }
 
-    .btn-primary, .btn-outline {
+    .btn-primary,
+    .btn-outline {
       border-radius: 999px;
       padding: 10px 18px;
       font-size: 14px;
@@ -175,7 +189,7 @@
     .btn-primary {
       background: linear-gradient(to right, #0ea5e9, #0284c7);
       color: white;
-      border-color: rgba(148, 163, 184, 0.3);
+      border-color: rgba(148, 163, 184, 0.25);
       box-shadow: 0 8px 22px rgba(14, 165, 233, 0.35);
     }
 
@@ -185,12 +199,22 @@
       color: var(--muted);
     }
 
+    .hero-note {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-note strong {
+      color: var(--accent);
+    }
+
+    /* RIGHT PANEL */
     .right-panel {
       background: var(--card);
       border-radius: 18px;
       padding: 18px;
       border: 1px solid var(--border);
-      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -202,6 +226,12 @@
       align-items: center;
       font-size: 13px;
       color: var(--muted);
+    }
+
+    .right-header span.title {
+      font-weight: 600;
+      color: #0f172a;
+      font-size: 13px;
     }
 
     .tag-row {
@@ -249,8 +279,24 @@
       color: #0284c7;
     }
 
-    .card-title { font-weight: 600; color: #0f172a; }
-    .card-sub { font-size: 12px; color: var(--muted); }
+    .card-title {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .card-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-chip {
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--muted);
+      background: #f9fafb;
+    }
 
     footer {
       margin-top: 32px;
@@ -264,7 +310,9 @@
       padding-top: 12px;
     }
 
-    footer a { text-decoration: underline dotted; }
+    footer a {
+      text-decoration: underline dotted;
+    }
   </style>
 </head>
 
@@ -275,90 +323,173 @@
         <img src="logo.png" alt="CodeLogicAI logo" class="logo-img" />
         <div class="logo-text">
           <span>CodeLogicAI</span>
-          <span>AI bots that actually do the work</span>
+          <span>AI bots, CRM automation & training</span>
         </div>
       </div>
 
       <div class="pill">
         <span class="pill-dot"></span>
-        <span>New: <span class="accent">Lead, Scheduling & CFO bots</span></span>
+        <span>
+          New:
+          <span class="accent">CodeLogicAI CRM Bot, CareClerk & AI Certification Bootcamp</span>
+        </span>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="eyebrow">AI for small business</div>
+        <div class="eyebrow">Built for real businesses & hospitals</div>
 
         <h1>
-          AI bots for <span class="gradient-text">leads, scheduling, and CFO insights</span> — done for you.
+          AI bots, CRM automation, <span class="gradient-text">CareClerk for hospitals</span> &
+          AI Certification Bootcamps.
         </h1>
 
         <p class="hero-sub">
-          We build and maintain AI bots that
-          <strong>capture leads 24/7</strong>,
-          <strong>book appointments</strong>,
+          CodeLogicAI designs, builds, and hosts AI systems that
+          <strong>capture and qualify leads</strong>,
           <strong>update your CRM</strong>,
+          <strong>book appointments</strong>,
+          <strong>support hospital workflows</strong>,
           and
-          <strong>send CFO-style summaries</strong>
-          without you learning any tech.
+          <strong>surface CFO-style insights</strong>
+          while you focus on running your organization.
         </p>
 
+        <ul class="hero-list">
+          <li><strong>CodeLogicAI CRM Bot:</strong> lead intake, qualification, follow-up & CRM updates.</li>
+          <li><strong>CareClerk:</strong> hospital & clinic bot for intake, scheduling, patient communication and safe handoffs.</li>
+          <li><strong>AI Certification Bootcamp:</strong> live training on using AI safely and effectively in your workflows.</li>
+          <li><strong>Managed bot hosting & servers:</strong> we run the infrastructure so you don’t have to.</li>
+        </ul>
+
         <div class="hero-cta-row">
-          <a class="btn-primary" href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Bot%20Build%20Inquiry">Book a free consult</a>
-          <a class="btn-outline" href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Questions">Ask a question</a>
+          <a
+            class="btn-primary"
+            href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Bot%20%2F%20CRM%20%2F%20CareClerk%20Inquiry"
+          >
+            Book a free consult
+          </a>
+          <a
+            class="btn-outline"
+            href="mailto:codelogicai.llc@gmail.com?subject=AI%20Certification%20Bootcamp%20Info"
+          >
+            Ask about the AI Bootcamp
+          </a>
         </div>
+
+        <p class="hero-note">
+          <strong>Done-for-you builds</strong> with ongoing monitoring, updates, and human support
+          for both business and healthcare environments.
+        </p>
       </section>
 
       <aside class="right-panel">
         <div class="right-header">
-          <span>What we build</span>
-          <span>Done-for-you support</span>
+          <span class="title">What CodeLogicAI offers</span>
+          <span>Simple packages. Real outcomes.</span>
         </div>
 
         <div class="tag-row">
-          <span class="tag">Lead capture</span>
-          <span class="tag">Qualification</span>
-          <span class="tag">Scheduling</span>
-          <span class="tag">CRM updates</span>
-          <span class="tag">Inbox sync</span>
-          <span class="tag">CFO-style insights</span>
+          <span class="tag">CodeLogicAI CRM Bot</span>
+          <span class="tag">CareClerk hospital bot</span>
+          <span class="tag">Lead & CRM automation</span>
+          <span class="tag">Appointment scheduling</span>
+          <span class="tag">CFO-style summaries</span>
+          <span class="tag">AI Certification Bootcamp</span>
+          <span class="tag">Managed hosting & servers</span>
         </div>
 
         <div class="cards">
+          <!-- CRM / Lead Bot -->
           <div class="card">
             <div class="card-icon">💬</div>
             <div>
-              <div class="card-title">Lead intake bots</div>
-              <div class="card-sub">Turn clicks into booked calls automatically.</div>
+              <div class="card-title">CodeLogicAI CRM Bot</div>
+              <div class="card-sub">
+                A done-for-you AI bot that captures leads, qualifies them, pushes them into your CRM,
+                and keeps conversations organized across channels.
+              </div>
             </div>
-            <div class="tag">24/7</div>
+            <div class="card-chip">Lead & CRM automation</div>
           </div>
 
+          <!-- CareClerk hospital bot -->
+          <div class="card">
+            <div class="card-icon">🏥</div>
+            <div>
+              <div class="card-title">CareClerk – hospital & clinic bot</div>
+              <div class="card-sub">
+                AI support for hospitals and clinics: intake, scheduling, reminders, patient messaging,
+                and safer handoffs between front desk, providers, and care teams.
+              </div>
+            </div>
+            <div class="card-chip">Healthcare workflows</div>
+          </div>
+
+          <!-- Scheduling & Ops Bot -->
           <div class="card">
             <div class="card-icon">📅</div>
             <div>
-              <div class="card-title">Scheduling & reminders</div>
-              <div class="card-sub">Reduce no-shows with smart calendar rules.</div>
+              <div class="card-title">Scheduling & operations bots</div>
+              <div class="card-sub">
+                Bots that respect your calendar rules, send reminders, and reduce no-shows while updating
+                your systems behind the scenes.
+              </div>
             </div>
-            <div class="tag">Smart AI</div>
+            <div class="card-chip">Less chaos</div>
           </div>
 
+          <!-- CFO Bot -->
           <div class="card">
             <div class="card-icon">📊</div>
             <div>
-              <div class="card-title">CFO-style insights</div>
-              <div class="card-sub">Simple summaries of revenue drivers & pipeline.</div>
+              <div class="card-title">CFO-style insights bot</div>
+              <div class="card-sub">
+                Pull key numbers into simple summaries so you can see pipeline, activity, and trends
+                without living in spreadsheets.
+              </div>
             </div>
-            <div class="tag">Clarity</div>
+            <div class="card-chip">Clarity</div>
+          </div>
+
+          <!-- Bootcamp -->
+          <div class="card">
+            <div class="card-icon">🎓</div>
+            <div>
+              <div class="card-title">AI Certification Bootcamp</div>
+              <div class="card-sub">
+                Practical AI training for owners, staff, and care teams: prompts, workflows, safety,
+                and how to partner with your bots instead of fighting them.
+              </div>
+            </div>
+            <div class="card-chip">Train your team</div>
+          </div>
+
+          <!-- Hosting / Servers -->
+          <div class="card">
+            <div class="card-icon">☁️</div>
+            <div>
+              <div class="card-title">Managed bot hosting & servers</div>
+              <div class="card-sub">
+                We host, monitor, and maintain your bots so they stay secure, updated, and online —
+                without you touching a single server.
+              </div>
+            </div>
+            <div class="card-chip">Fully managed</div>
           </div>
         </div>
-
       </aside>
     </main>
 
     <footer>
-      <span>© <span id="year"></span> CodeLogicAI LLC</span>
-      <a href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Project%20Inquiry">Start a project</a>
+      <span>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</span>
+      <span>
+        Ready to explore CRM bots, CareClerk, hosting, or the Bootcamp?
+        <a href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Project%20Inquiry">
+          Email us to get started.
+        </a>
+      </span>
     </footer>
   </div>
 
