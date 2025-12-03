@@ -2,318 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CodeLogicAI – AI Bots, CRM Automation, CareClerk & AI Certification Bootcamp</title>
+  <title>CodeLogicAI – AI Bots, CRM Automation, CareClerk & AI Bootcamps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
     content="CodeLogicAI builds custom AI bots for leads, CRM automation, scheduling, CFO insights, CareClerk for hospitals, plus AI Certification Bootcamps and fully managed bot hosting."
   />
-
-  <style>
-    :root {
-      --bg: #f3f4f6;
-      --bg-alt: #e5e7eb;
-      --accent: #0ea5e9;
-      --accent-soft: rgba(14, 165, 233, 0.12);
-      --text: #020617;
-      --muted: #6b7280;
-      --card: #ffffff;
-      --border: #e5e7eb;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: linear-gradient(to bottom, #f9fafb, #e5e7eb);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 80px;
-    }
-
-    /* HEADER */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-img {
-      height: 54px;
-      width: auto;
-      border-radius: 6px;
-      box-shadow: 0 0 12px rgba(14, 165, 233, 0.45);
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .logo-text span:first-child {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      font-size: 18px;
-    }
-
-    .logo-text span:last-child {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .pill {
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      border: 1px solid var(--border);
-      background: #ffffffdd;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .pill-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.7);
-    }
-
-    .pill span.accent {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    /* LAYOUT */
-    main {
-      display: grid;
-      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
-      gap: 32px;
-    }
-
-    @media (max-width: 900px) {
-      main {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .hero {
-      padding-right: 8px;
-    }
-
-    .eyebrow {
-      font-size: 12px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: clamp(28px, 4vw, 36px);
-      line-height: 1.2;
-      margin-bottom: 14px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(to right, #0284c7, #0ea5e9);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero-sub {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 18px;
-    }
-
-    .hero-sub strong {
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .hero-list {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 18px;
-      padding-left: 18px;
-    }
-
-    .hero-list li {
-      margin-bottom: 4px;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary,
-    .btn-outline {
-      border-radius: 999px;
-      padding: 10px 18px;
-      font-size: 14px;
-      font-weight: 500;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary {
-      background: linear-gradient(to right, #0ea5e9, #0284c7);
-      color: white;
-      border-color: rgba(148, 163, 184, 0.25);
-      box-shadow: 0 8px 22px rgba(14, 165, 233, 0.35);
-    }
-
-    .btn-outline {
-      background: white;
-      border-color: var(--border);
-      color: var(--muted);
-    }
-
-    .hero-note {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .hero-note strong {
-      color: var(--accent);
-    }
-
-    /* RIGHT PANEL */
-    .right-panel {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 18px;
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .right-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .right-header span.title {
-      font-weight: 600;
-      color: #0f172a;
-      font-size: 13px;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      font-size: 11px;
-    }
-
-    .tag {
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: #f9fafb;
-      color: var(--muted);
-    }
-
-    .cards {
-      display: grid;
-      gap: 10px;
-      font-size: 13px;
-    }
-
-    .card {
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      background: white;
-      padding: 12px;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 10px;
-      align-items: center;
-    }
-
-    .card-icon {
-      width: 26px;
-      height: 26px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 14px;
-      background: #f0f9ff;
-      color: #0284c7;
-    }
-
-    .card-title {
-      font-weight: 600;
-      color: #0f172a;
-    }
-
-    .card-sub {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .card-chip {
-      padding: 3px 8px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 11px;
-      color: var(--muted);
-      background: #f9fafb;
-    }
-
-    footer {
-      margin-top: 32px;
-      font-size: 12px;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-      border-top: 1px dashed var(--border);
-      padding-top: 12px;
-    }
-
-    footer a {
-      text-decoration: underline dotted;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -335,7 +30,22 @@
         </span>
       </div>
     </header>
+  </div>
 
+  <div class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="bots.html" class="nav-link">Bots</a>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="careers.html" class="nav-link">Careers</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+
+  <div class="page">
     <main>
       <section class="hero">
         <div class="eyebrow">Built for real businesses & hospitals</div>
@@ -401,20 +111,17 @@
         </div>
 
         <div class="cards">
-          <!-- CRM / Lead Bot -->
           <div class="card">
             <div class="card-icon">💬</div>
             <div>
               <div class="card-title">CodeLogicAI CRM Bot</div>
               <div class="card-sub">
-                A done-for-you AI bot that captures leads, qualifies them, pushes them into your CRM,
-                and keeps conversations organized across channels.
+                Capture, qualify and organize leads while keeping your CRM and inbox up to date across channels.
               </div>
             </div>
             <div class="card-chip">Lead & CRM automation</div>
           </div>
 
-          <!-- CareClerk hospital bot -->
           <div class="card">
             <div class="card-icon">🏥</div>
             <div>
@@ -427,7 +134,6 @@
             <div class="card-chip">Healthcare workflows</div>
           </div>
 
-          <!-- Scheduling & Ops Bot -->
           <div class="card">
             <div class="card-icon">📅</div>
             <div>
@@ -440,20 +146,17 @@
             <div class="card-chip">Less chaos</div>
           </div>
 
-          <!-- CFO Bot -->
           <div class="card">
             <div class="card-icon">📊</div>
             <div>
               <div class="card-title">CFO-style insights bot</div>
               <div class="card-sub">
-                Pull key numbers into simple summaries so you can see pipeline, activity, and trends
-                without living in spreadsheets.
+                See pipeline, activity, and trends at a glance instead of living in spreadsheets.
               </div>
             </div>
             <div class="card-chip">Clarity</div>
           </div>
 
-          <!-- Bootcamp -->
           <div class="card">
             <div class="card-icon">🎓</div>
             <div>
@@ -466,7 +169,6 @@
             <div class="card-chip">Train your team</div>
           </div>
 
-          <!-- Hosting / Servers -->
           <div class="card">
             <div class="card-icon">☁️</div>
             <div>
