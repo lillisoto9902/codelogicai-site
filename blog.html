@@ -1,205 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css" />
-  <head>
+<head>
   <meta charset="UTF-8" />
   <title>Blog – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Insights, updates, and AI innovations from CodeLogicAI LLC." />
-
-  <style>
-    :root {
-      --bg: #021430;
-      --accent: #1fd4ff;
-      --accent-soft: rgba(31, 212, 255, 0.15);
-      --text: #f9fafb;
-      --muted: #c7d2fe;
-      --card: rgba(10, 23, 50, 0.96);
-      --border: rgba(148, 163, 184, 0.55);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: radial-gradient(circle at top, #0b2f63 0, #021430 55%, #020617 100%);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px 16px 80px;
-    }
-
-    header {
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; margin-bottom: 40px; gap: 16px;
-    }
-
-    .logo { display: flex; align-items: center; gap: 12px; }
-    .logo-img {
-      height: 46px; width: auto;
-      border-radius: 6px;
-      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
-    }
-    .logo-text { display: flex; flex-direction: column; }
-    .logo-text span:first-child { font-weight: 700; font-size: 17px; letter-spacing: 0.03em; }
-    .logo-text span:last-child { font-size: 12px; color: var(--muted); }
-
-    .nav {
-      display: flex; gap: 10px; flex-wrap: wrap; font-size: 13px;
-    }
-    .nav a {
-      padding: 6px 11px; border-radius: 999px;
-      color: var(--muted);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      background: rgba(12, 20, 48, 0.95);
-    }
-    .nav a:hover {
-      color: var(--text);
-      background: rgba(15, 23, 42, 0.98);
-      border-color: rgba(191, 219, 254, 0.9);
-    }
-
-    .section { margin-top: 32px; }
-    .section h1 { font-size: clamp(30px,4vw,38px); margin-bottom: 10px; }
-    .section-sub { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
-
-    .post-card {
-      background: var(--card); padding: 20px;
-      border-radius: 16px; border: 1px solid var(--border);
-      margin-bottom: 24px; box-shadow: 0 10px 26px rgba(15,23,42,0.6);
-    }
-
-    .post-title { font-size: 22px; margin-bottom: 6px; }
-    .post-meta { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
-    .post-body { font-size: 15px; line-height: 1.7; color: var(--text); }
-
-    .post-body p { margin-bottom: 12px; }
-    .post-body strong { color: var(--accent); }
-
-    footer {
-      margin-top: 40px; font-size: 12px; color: var(--muted);
-      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
-    }
-  </style>
+  <meta
+    name="description"
+    content="Insights, updates, and AI innovations from CodeLogicAI LLC – CRM bots, CareClerk for hospitals, CFO insights, and practical automation."
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-<div class="page">
-
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <img src="assets/Logo.png" alt="CodeLogicAI Logo" class="logo-img">
-      <div class="logo-text">
-        <span>CodeLogicAI</span>
-        <span>AI bots for real-world businesses</span>
+  <!-- Shared header -->
+  <div class="page">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="CodeLogicAI logo" class="logo-img" />
+        <div class="logo-text">
+          <span>CodeLogicAI</span>
+          <span>AI bots, CRM automation & training</span>
+        </div>
       </div>
-    </div>
 
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>
+          <span class="accent">CodeLogicAI Blog</span>
+        </span>
+      </div>
+    </header>
+  </div>
+
+  <!-- Shared nav -->
+  <div class="nav-wrapper">
     <nav class="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="bots.html">AI Bots</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
-      <a href="blog.html">Blog</a>
-      <a href="careers.html">Careers</a>
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"    class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="bots.html"     class="nav-link">Bots</a>
+      <a href="pricing.html"  class="nav-link">Pricing</a>
+      <a href="blog.html"     class="nav-link active">Blog</a>
+      <a href="careers.html"  class="nav-link">Careers</a>
+      <a href="contact.html"  class="nav-link">Contact</a>
     </nav>
-  </header>
+  </div>
 
-  <!-- BLOG HEADER -->
-  <section class="section">
-    <h1>CodeLogicAI Blog</h1>
-    <p class="section-sub">Insights, updates, and innovation for small businesses adopting AI.</p>
-  </section>
+  <!-- Page content -->
+  <div class="page">
+    <section class="page-section">
+      <h1>CodeLogicAI Blog</h1>
+      <p>
+        Insights, updates, and practical AI for small businesses, agencies, and healthcare teams
+        using bots like the CodeLogicAI CRM Bot and CareClerk.
+      </p>
 
-  <!-- FIRST BLOG POST -->
-  <article class="post-card">
-    <h2 class="post-title">The Future Is Now: How CodeLogicAI LLC Is Transforming Small Business Through AI</h2>
-    <div class="post-meta">Published: <span id="blogDate"></span></div>
+      <article class="card" style="margin-top:16px;">
+        <h2 class="card-title">
+          The Future Is Now: How CodeLogicAI LLC Is Transforming Small Business Through AI
+        </h2>
+        <p class="card-sub">
+          Published: <span id="blogDate"></span>
+        </p>
 
-    <div class="post-body">
-      <p>Artificial Intelligence isn’t a luxury anymore — it’s the backbone of modern business. At <strong>CodeLogicAI LLC</strong>, we build AI solutions that help companies operate smarter, faster, and more efficiently without the heavy costs or complexity often associated with tech adoption.</p>
+        <div style="font-size:14px; line-height:1.7; color:var(--text);">
+          <p>
+            Artificial Intelligence isn’t a luxury anymore — it’s the backbone of modern business.
+            At <strong>CodeLogicAI LLC</strong>, we build AI solutions that help companies operate
+            smarter, faster, and more efficiently without the heavy costs or complexity often
+            associated with tech adoption.
+          </p>
 
-      <p><strong>Our mission is simple:</strong><br>
-      Make advanced AI accessible to every business, not just big corporations.</p>
+          <p>
+            <strong>Our mission is simple:</strong><br />
+            Make advanced AI accessible to every business, not just big corporations.
+          </p>
 
-      <h3>Our Vision: AI Designed for Real People</h3>
-      <p>At CodeLogicAI LLC, we believe innovation should empower, not overwhelm. AI should support human creativity, reduce workload, and open new opportunities. Too many small and mid-sized businesses struggle with outdated systems, manual tasks, and the constant pressure to stay competitive. We’re here to change that.</p>
+          <h3>Our Vision: AI Designed for Real People</h3>
+          <p>
+            At CodeLogicAI LLC, we believe innovation should empower, not overwhelm. AI should
+            support human creativity, reduce workload, and open new opportunities. Too many small
+            and mid-sized businesses struggle with outdated systems, manual tasks, and the constant
+            pressure to stay competitive. We’re here to change that.
+          </p>
 
-      <p>Our vision is built around three core ideas:</p>
-      <ul class="post-body">
-        <li>AI should be affordable and customizable for businesses of all sizes.</li>
-        <li>Automation should eliminate stress — not create more.</li>
-        <li>Technology should amplify human potential, not replace it.</li>
-      </ul>
+          <p>Our vision is built around three core ideas:</p>
+          <ul>
+            <li>AI should be affordable and customizable for businesses of all sizes.</li>
+            <li>Automation should eliminate stress — not create more.</li>
+            <li>Technology should amplify human potential, not replace it.</li>
+          </ul>
 
-      <p>We want every entrepreneur, service provider, and small business owner to have the tools they need to work smarter and grow faster.</p>
+          <p>
+            We want every entrepreneur, service provider, and small business owner to have the tools
+            they need to work smarter and grow faster.
+          </p>
 
-      <h3>What We Deliver: Practical AI for Real-World Problems</h3>
-      <p>CodeLogicAI LLC specializes in building solutions that save time, cut costs, and increase productivity. Our core offerings include:</p>
+          <h3>What We Deliver: Practical AI for Real-World Problems</h3>
+          <p>
+            CodeLogicAI LLC specializes in building solutions that save time, cut costs, and increase
+            productivity. Our core offerings include:
+          </p>
 
-      <p>🚀 <strong>Intelligent AI Bots & Automations</strong><br>
-      From lead-generation bots to appointment schedulers, customer-service agents, and financial projection tools, our bots work 24/7 and plug directly into your workflow.</p>
+          <p>
+            🚀 <strong>Intelligent AI Bots & Automations</strong><br />
+            From lead-generation bots to appointment schedulers, customer-service agents, and
+            financial insight tools, our bots work 24/7 and plug directly into your workflow.
+          </p>
 
-      <p>⚡ <strong>Custom CRM Systems</strong><br>
-      We design lightweight, efficient CRMs tailored to how your business actually operates. No clutter, no unnecessary menus — just streamlined tools that boost conversions and keep you organized.</p>
+          <p>
+            ⚡ <strong>Custom CRM Systems & CRM Bots</strong><br />
+            We design lightweight, efficient CRM workflows and bots tailored to how your business
+            actually operates. No clutter, no unnecessary menus — just streamlined tools that boost
+            conversions and keep you organized.
+          </p>
 
-      <p>📊 <strong>CFO & Financial Tools</strong><br>
-      Our SummitAI CFO Bot helps business owners see their financial future clearly with profit estimates, scenario planning, and spending analysis — all powered by intelligent automation.</p>
+          <p>
+            🏥 <strong>CareClerk for hospitals & clinics</strong><br />
+            Intake, scheduling, reminders, and patient messaging designed for real healthcare teams
+            that can’t afford dropped calls, missed messages, or unsafe handoffs.
+          </p>
 
-      <p>🛠️ <strong>Custom Coding & System Development</strong><br>
-      We build high-performance FastAPI applications, backend automations, dashboards, and multi-bot ecosystems designed for scalability.</p>
+          <p>
+            📊 <strong>CFO & Financial Tools</strong><br />
+            Our CFO-style insights bots help business owners see their financial reality clearly
+            with simple summaries, scenario planning, and activity trends — all powered by
+            intelligent automation.
+          </p>
 
-      <p>💡 <strong>Creative & Branding AI Tools</strong><br>
-      Need AI-powered marketing content, ads, scripts, or brand assets? We’ve got that covered too.</p>
+          <p>
+            🛠️ <strong>Custom Coding & System Development</strong><br />
+            We build high-performance backend automations, dashboards, and multi-bot ecosystems
+            designed for real use, not just demos.
+          </p>
 
-      <h3>Why Businesses Trust CodeLogicAI LLC</h3>
-      <p>Our approach combines business strategy with technical precision. Companies choose us because:</p>
+          <h3>Why Businesses Trust CodeLogicAI LLC</h3>
+          <p>Our approach combines business strategy with technical precision. Companies choose us because:</p>
+          <ul>
+            <li>We build fast and iteratively, not in endless “phases.”</li>
+            <li>Our systems start reducing workload from day one.</li>
+            <li>We prioritize affordability without sacrificing quality.</li>
+            <li>We stay involved with monitoring, updates, and support.</li>
+            <li>Our AI behaves like a dedicated team member — consistent and reliable.</li>
+          </ul>
 
-      <ul class="post-body">
-        <li>We build fast and efficiently.</li>
-        <li>Our systems reduce workload from day one.</li>
-        <li>We prioritize affordability without sacrificing quality.</li>
-        <li>We offer long-term support and evolution as your business grows.</li>
-        <li>Our AI acts like a dedicated team member — consistent and reliable.</li>
-      </ul>
+          <p>
+            We don’t believe in one-size-fits-all software. Every tool we build is shaped around
+            your needs, your industry, and your goals.
+          </p>
 
-      <p>We don’t believe in one-size-fits-all software. Every tool we build is shaped around your needs, your industry, and your goals.</p>
+          <h3>Building the Future Together</h3>
+          <p>
+            At CodeLogicAI LLC, we don’t just deliver code. We deliver clarity, growth, and margin
+            — time back for you and your team. Our purpose is to help you reclaim hours, streamline
+            operations, and compete confidently in a fast-moving world.
+          </p>
 
-      <h3>Building the Future Together</h3>
-      <p>At CodeLogicAI LLC, we don’t just deliver code. We deliver clarity, growth, and freedom. Our purpose is to help you reclaim time, streamline operations, and compete confidently in a fast-moving world.</p>
+          <p><strong>The future is here. Let’s build it together.</strong></p>
 
-      <p><strong>The future is here. Let’s build it together.</strong></p>
-    </div>
-  </article>
+          <p style="margin-top:14px;">
+            If you’re ready to see what this could look like in your business or hospital,
+            <a href="contact.html">reach out to us</a> and let’s map your first automation.
+          </p>
+        </div>
+      </article>
+    </section>
 
-  <footer>
-    <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-    <div class="footer-links">
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
-    </div>
-  </footer>
-</div>
+    <footer>
+      <span>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</span>
+      <span>
+        Want to feature your use case?
+        <a href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Blog%20Feature">Email us.</a>
+      </span>
+    </footer>
+  </div>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("blogDate").textContent = new Date().toLocaleDateString();
-</script>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("blogDate").textContent = new Date().toLocaleDateString();
+  </script>
 </body>
 </html>
+
 
