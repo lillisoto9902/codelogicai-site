@@ -1,602 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css" />
-  <head>
+<head>
   <meta charset="UTF-8" />
   <title>Services – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="CodeLogicAI offers AI bot implementation, MiniCRM lead-gen setups, healthcare intake automation, CFO visibility tools, and custom automation projects with training."
+    content="Services from CodeLogicAI: CRM bot builds, CareClerk for hospitals and clinics, CFO-style insight bots, AI Certification Bootcamps, and managed hosting."
   />
-
-  <style>
-    :root {
-      --bg: #021430;
-      --bg-alt: #032341;
-      --accent: #1fd4ff;
-      --accent-soft: rgba(31, 212, 255, 0.16);
-      --text: #f9fafb;
-      --muted: #c7d2fe;
-      --danger: #fb7185;
-      --card: rgba(10, 23, 50, 0.96);
-      --border: rgba(148, 163, 184, 0.55);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: radial-gradient(circle at top, #0b2f63 0, #021430 55%, #020617 100%);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 80px;
-    }
-
-    /* Header + logo */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-img {
-      height: 46px;
-      width: auto;
-      border-radius: 6px;
-      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .logo-text span:first-child {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      font-size: 17px;
-    }
-
-    .logo-text span:last-child {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .header-cta {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 4px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(6, 17, 40, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .dot-green {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
-    }
-
-    /* Nav */
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 13px;
-    }
-
-    .nav a {
-      padding: 6px 11px;
-      border-radius: 999px;
-      color: var(--muted);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      background: rgba(12, 20, 48, 0.95);
-    }
-
-    .nav a:hover {
-      color: var(--text);
-      background: rgba(15, 23, 42, 0.98);
-      border-color: rgba(191, 219, 254, 0.9);
-    }
-
-    main { display: block; }
-
-    .section {
-      margin-top: 32px;
-    }
-
-    .section h1 {
-      font-size: clamp(30px, 4vw, 38px);
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .section h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .section p.section-sub {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 18px;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    @media (max-width: 880px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .grid-2,
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      padding: 14px 14px 16px;
-      font-size: 13px;
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.6);
-    }
-
-    .card h3 {
-      font-size: 15px;
-      margin-bottom: 6px;
-    }
-
-    .label {
-      display: inline-block;
-      font-size: 11px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 6px;
-    }
-
-    .pill-row span {
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(7, 19, 42, 0.95);
-      border: 1px solid rgba(148, 163, 184, 0.75);
-      color: var(--muted);
-    }
-
-    .list {
-      margin-top: 6px;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .list li + li {
-      margin-top: 3px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      border-radius: 999px;
-      padding: 9px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition:
-        transform 0.12s ease,
-        box-shadow 0.12s ease,
-        background 0.12s ease,
-        border-color 0.12s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #1fd4ff, #38bdf8);
-      color: #0f172a;
-      box-shadow: 0 12px 26px rgba(56, 189, 248, 0.45);
-      font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 34px rgba(56, 189, 248, 0.6);
-    }
-
-    .btn-secondary {
-      background: rgba(15, 23, 42, 0.96);
-      border-color: rgba(148, 163, 184, 0.75);
-      color: var(--muted);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(15, 23, 42, 0.99);
-      border-color: rgba(191, 219, 254, 0.9);
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .footer-links a {
-      font-size: 12px;
-      color: var(--muted);
-      margin-left: 10px;
-    }
-
-    .tagline {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 4px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- Shared header -->
   <div class="page">
-
     <header>
       <div class="logo">
-        <img src="assets/Logo.png" alt="CodeLogicAI Logo" class="logo-img">
+        <img src="logo.png" alt="CodeLogicAI logo" class="logo-img" />
         <div class="logo-text">
           <span>CodeLogicAI</span>
-          <span>AI bots for real-world businesses</span>
+          <span>AI bots, CRM automation & training</span>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="bots.html">AI Bots</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a href="blog.html">Blog</a>
-        <a href="careers.html">Careers</a>
-      </nav>
-
-      <div class="header-cta">
-        <div class="pill">
-          <span class="dot-green"></span>
-          <span>From idea → live automation</span>
-        </div>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>
+          <span class="accent">Done-for-you AI systems, not DIY chaos</span>
+        </span>
       </div>
     </header>
+  </div>
 
-    <main>
-      <!-- HERO / INTRO -->
-      <section class="section">
-        <div style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
-          Services
-        </div>
-        <h1>Services built around how your business actually runs.</h1>
-        <p class="section-sub">
-          Whether you’re just starting with one bot or rolling out automations across locations,
-          CodeLogicAI gives you a clear path: scope, build, connect, and iterate — with training so
-          your team isn’t left in the dark.
-        </p>
+  <!-- Shared nav -->
+  <div class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"    class="nav-link">About</a>
+      <a href="services.html" class="nav-link active">Services</a>
+      <a href="bots.html"     class="nav-link">Bots</a>
+      <a href="pricing.html"  class="nav-link">Pricing</a>
+      <a href="blog.html"     class="nav-link">Blog</a>
+      <a href="careers.html"  class="nav-link">Careers</a>
+      <a href="contact.html"  class="nav-link">Contact</a>
+    </nav>
+  </div>
 
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
-          <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Book a 15-min services consult →
-          </a>
-          <a href="bots.html" class="btn-secondary">
-            View our core bots
-          </a>
-        </div>
-      </section>
+  <!-- Page content -->
+  <div class="page">
+    <section class="page-section">
+      <h1>Services</h1>
+      <p>
+        CodeLogicAI designs, builds, and maintains AI systems that plug into the way you already work.
+        We focus on clear outcomes: more booked calls, smoother patient communication, and better visibility
+        into your numbers — not just “more AI.”
+      </p>
+      <p>
+        You can start with a single project or build a full stack over time. Everything runs on managed
+        infrastructure so you don’t have to touch servers or prompts unless you want to.
+      </p>
+    </section>
 
-      <!-- IMPLEMENTATION PACKAGES -->
-      <section class="section">
-        <h2>Implementation packages</h2>
-        <p class="section-sub">
-          Start with a focused implementation: one bot, one workflow, one core outcome.
-          From there we can add channels, locations, and deeper integrations.
-        </p>
+    <!-- Core service categories -->
+    <section class="page-section">
+      <h2>What we do</h2>
 
-        <div class="grid-2">
-          <div class="card">
-            <span class="label">Leads & bookings</span>
-            <h3>MiniCRM Lead-Gen Setup</h3>
-            <p>
-              For home services, agencies, and local businesses that need lead capture,
-              qualification, and bookings running on autopilot.
-            </p>
-            <ul class="list">
-              <li>Discovery session to map your funnel</li>
-              <li>Bot script & conversation design based on your offers</li>
-              <li>Integration into MiniCRM or Google Sheets</li>
-              <li>Calendar connection (where applicable)</li>
-              <li>Launch support + 30-day performance review</li>
-            </ul>
-            <div class="pill-row">
-              <span>Leads in one place</span>
-              <span>Less manual chasing</span>
+      <div class="cards" style="margin-top:14px;">
+        <!-- CRM & lead bots -->
+        <div class="card">
+          <div class="card-icon">💬</div>
+          <div>
+            <div class="card-title">CRM & lead automation builds</div>
+            <div class="card-sub">
+              We design and deploy the <strong>CodeLogicAI CRM Bot</strong> around your intake process:
+              how leads find you, what you need to know, and how you want them booked.
+              <ul style="margin-top:8px; padding-left:18px;">
+                <li>Lead capture via web chat, SMS, or social.</li>
+                <li>Qualifying questions tailored to your services.</li>
+                <li>Calendar booking and reminder flows.</li>
+                <li>Clean data to your CRM or Google Sheets.</li>
+              </ul>
             </div>
           </div>
+          <div class="card-chip">For service businesses & agencies</div>
+        </div>
 
-          <div class="card">
-            <span class="label">Healthcare workflows</span>
-            <h3>CareClerk Implementation</h3>
-            <p>
-              For clinics, practices, and wellness providers who want better patient
-              communication without overloading staff.
-            </p>
-            <ul class="list">
-              <li>Intake & triage flow mapping (non-diagnostic)</li>
-              <li>PHI-aware conversational design & consent language</li>
-              <li>Appointment request & reminder flows</li>
-              <li>Routing plan for sensitive messages</li>
-              <li>Team orientation on how and when to use the bot</li>
-            </ul>
-            <div class="pill-row">
-              <span>Fewer phone bottlenecks</span>
-              <span>Clearer patient expectations</span>
+        <!-- CareClerk & healthcare -->
+        <div class="card">
+          <div class="card-icon">🏥</div>
+          <div>
+            <div class="card-title">CareClerk for hospitals & clinics</div>
+            <div class="card-sub">
+              We implement <strong>CareClerk</strong> to support real healthcare teams:
+              front desk, nurses, providers, and admins who need fewer dropped balls.
+              <ul style="margin-top:8px; padding-left:18px;">
+                <li>Intake, triage-style questions, and basic routing.</li>
+                <li>Appointment support and scheduling requests.</li>
+                <li>Reminders, visit prep, and follow-up messaging.</li>
+                <li>Flows designed around your policies and guardrails.</li>
+              </ul>
             </div>
           </div>
+          <div class="card-chip">For healthcare workflows</div>
         </div>
 
-        <div class="grid-2" style="margin-top:18px;">
-          <div class="card">
-            <span class="label">Finance visibility</span>
-            <h3>SummitAI CFO Setup</h3>
-            <p>
-              For owners and operators who want clean, conversational visibility into
-              cash flow, runway, and key financial signals.
-            </p>
-            <ul class="list">
-              <li>Connect or import your existing financial data (exports, reports, etc.)</li>
-              <li>Define key questions and recurring insights you want answered</li>
-              <li>Configure dashboards and summary views</li>
-              <li>Set up optional alert and check-in cadence</li>
-              <li>Walkthrough session so you know how to “talk to your numbers”</li>
-            </ul>
-            <div class="pill-row">
-              <span>Fewer surprises</span>
-              <span>Owner-friendly insights</span>
+        <!-- CFO-style insights -->
+        <div class="card">
+          <div class="card-icon">📊</div>
+          <div>
+            <div class="card-title">CFO-style insight bots</div>
+            <div class="card-sub">
+              We build bots that turn exports from your tools into clear, conversational answers
+              about what’s happening in your business.
+              <ul style="margin-top:8px; padding-left:18px;">
+                <li>Revenue and expense summaries in plain language.</li>
+                <li>Simple “what if” scenario checks.</li>
+                <li>Highlights of slow-paying invoices or risky trends.</li>
+                <li>Owner-friendly reports instead of raw spreadsheets.</li>
+              </ul>
             </div>
           </div>
+          <div class="card-chip">For owners & operators</div>
+        </div>
 
-          <div class="card">
-            <span class="label">Custom automation</span>
-            <h3>Custom Bot & Workflow Project</h3>
-            <p>
-              For teams with unique processes, multi-location logic, or internal tooling
-              needs that don’t fit neatly into a template.
-            </p>
-            <ul class="list">
-              <li>Process & systems mapping workshop</li>
-              <li>Custom bot design across one or more channels</li>
-              <li>Integrations into your stack (CRM, sheets, ticketing, etc.)</li>
-              <li>Playbooks and SOPs for your team</li>
-              <li>Optional ongoing optimization retainer</li>
-            </ul>
-            <div class="pill-row">
-              <span>Tailored flows</span>
-              <span>Internal + external use cases</span>
+        <!-- Custom automations -->
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <div>
+            <div class="card-title">Custom automations & workflows</div>
+            <div class="card-sub">
+              When your process doesn’t fit a template, we scope and build custom flows: internal tools,
+              multi-location logic, or blended support + sales experiences.
+              <ul style="margin-top:8px; padding-left:18px;">
+                <li>Process mapping sessions with your team.</li>
+                <li>Custom flows, prompts, and safety rules.</li>
+                <li>Integrations with your existing tools and APIs.</li>
+                <li>Documentation so your staff understands how it all works.</li>
+              </ul>
             </div>
           </div>
+          <div class="card-chip">For unique setups</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- ONGOING SUPPORT & OPTIMIZATION -->
-      <section class="section">
-        <h2>Ongoing support & optimization</h2>
-        <p class="section-sub">
-          Bots aren’t “set and forget” — they get better as they learn from real conversations.
-          We offer structured ways to keep improving without overwhelming your team.
-        </p>
+    <!-- Hosting & ongoing work -->
+    <section class="page-section">
+      <h2>Managed hosting & ongoing care</h2>
+      <p>
+        We don’t just hand you a bot and disappear. CodeLogicAI can host, monitor, and keep everything
+        updated so your automations stay reliable as your tools and business evolve.
+      </p>
 
-        <div class="grid-3">
-          <div class="card">
-            <span class="label">Light-touch</span>
-            <h3>Quarterly Tune-Up</h3>
-            <p>
-              Perfect if you’re comfortable day-to-day but want a deeper review every
-              quarter to catch blind spots.
-            </p>
-            <ul class="list">
-              <li>Conversation & funnel review</li>
-              <li>Identify drop-off points and confusion</li>
-              <li>Updated prompts and flows</li>
-              <li>Brief report of what changed and why</li>
-            </ul>
+      <div class="cards" style="margin-top:14px;">
+        <div class="card">
+          <div class="card-icon">☁️</div>
+          <div>
+            <div class="card-title">Managed hosting</div>
+            <div class="card-sub">
+              <ul style="margin-top:6px; padding-left:18px;">
+                <li>Hosting for your bots and backend services.</li>
+                <li>Basic monitoring and uptime checks.</li>
+                <li>Updates when providers or APIs change.</li>
+              </ul>
+              <p style="margin-top:6px;">
+                Typically included as a monthly line item tied to each bot or stack.
+              </p>
+            </div>
           </div>
-
-          <div class="card">
-            <span class="label">Growth-focused</span>
-            <h3>Monthly Optimization</h3>
-            <p>
-              For teams actively scaling ad spend, locations, or services — where
-              small conversion lifts matter a lot.
-            </p>
-            <ul class="list">
-              <li>Monthly reviews of performance metrics</li>
-              <li>A/B tests on key questions and offers</li>
-              <li>Refinements to follow-up and routing rules</li>
-              <li>Suggestions for new automations as patterns appear</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <span class="label">Hands-on</span>
-            <h3>Fractional Automation Partner</h3>
-            <p>
-              For teams that want CodeLogicAI “in the loop” — collaborating with your
-              ops, marketing, and leadership as things evolve.
-            </p>
-            <ul class="list">
-              <li>Regular strategy syncs with your team</li>
-              <li>Experiment roadmap aligned with your goals</li>
-              <li>Priority updates and implementations</li>
-              <li>Documentation kept up-to-date as systems change</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- TRAINING & ENABLEMENT -->
-      <section class="section">
-        <h2>Training & enablement</h2>
-        <p class="section-sub">
-          Good automations feel invisible — your team just feels like their tools are finally
-          working with them. Training is how we get there.
-        </p>
-
-        <div class="grid-2">
-          <div class="card">
-            <span class="label">Team-ready</span>
-            <h3>Bot Playbooks & SOPs</h3>
-            <p>
-              We create simple, repeatable guides so your staff knows exactly how to work
-              alongside your bots — and what not to do.
-            </p>
-            <ul class="list">
-              <li>One-page “cheat sheets” for frontline staff</li>
-              <li>How to hand off from bot → human smoothly</li>
-              <li>Escalation and override guidelines</li>
-              <li>FAQ for common “what if?” scenarios</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <span class="label">Workshops</span>
-            <h3>Live Training Sessions</h3>
-            <p>
-              Interactive training for owners, managers, and staff to get comfortable
-              with your new workflows and dashboards.
-            </p>
-            <ul class="list">
-              <li>Owner/leadership overview session</li>
-              <li>Staff walkthrough focused on daily tasks</li>
-              <li>Q&A and scenario practice</li>
-              <li>Recorded sessions for new hires</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- FIT / CTA -->
-      <section class="section">
-        <h2>Is CodeLogicAI the right fit for you?</h2>
-        <p class="section-sub">
-          We’re a good fit if you’re serious about improving how your business runs —
-          not just “trying AI because it’s trendy.”
-        </p>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Great fit if you:</h3>
-            <ul class="list">
-              <li>Have real lead flow or patient volume (even if it’s messy)</li>
-              <li>Are open to adjusting processes, not just tech</li>
-              <li>Care about data quality and clear reporting</li>
-              <li>Want a partner who tells you what’s realistic — not just what’s possible</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Probably not a fit if you:</h3>
-            <ul class="list">
-              <li>Are just looking for a “set and forget” chatbot widget</li>
-              <li>Don’t have anyone who can own the process internally</li>
-              <li>Want automation with zero experimentation or learning</li>
-            </ul>
-          </div>
+          <div class="card-chip">We run the servers</div>
         </div>
 
-        <p class="tagline">
-          If you’re somewhere in the middle, that’s okay — the first call is about figuring
-          out where automation can help, not forcing a fit.
-        </p>
-
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
-          <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Talk about services & scope →
-          </a>
-          <a href="contact.html" class="btn-secondary">
-            Send context & get a recommendation
-          </a>
+        <div class="card">
+          <div class="card-icon">🔁</div>
+          <div>
+            <div class="card-title">Support & optimization</div>
+            <div class="card-sub">
+              <ul style="margin-top:6px; padding-left:18px;">
+                <li>Adjusting flows as your offers or policies change.</li>
+                <li>Cleaning up confusing questions or drop-off points.</li>
+                <li>Optional review calls to look at performance together.</li>
+              </ul>
+              <p style="margin-top:6px;">
+                Keeps your automations aligned with the business you’re running now,
+                not the one you had six months ago.
+              </p>
+            </div>
+          </div>
+          <div class="card-chip">Keeps bots sharp</div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+
+    <!-- AI Bootcamp -->
+    <section class="page-section">
+      <h2>AI Certification Bootcamp</h2>
+      <p>
+        Tools alone aren’t enough — your people need to feel confident using AI with judgment and
+        boundaries. That’s where our AI Certification Bootcamp comes in.
+      </p>
+      <ul>
+        <li>Live or virtual sessions tailored to your business or department.</li>
+        <li>Real examples using your own workflows and data patterns.</li>
+        <li>Prompting techniques, review habits, and safety practices.</li>
+        <li>“House rules” for AI inside your organization.</li>
+      </ul>
+      <p style="margin-top:8px;">
+        The Bootcamp pairs especially well with new bot deployments so your team understands what
+        the system does — and what still needs a human.
+      </p>
+    </section>
+
+    <!-- How we work together -->
+    <section class="page-section">
+      <h2>How we work with you</h2>
+      <p>
+        Every engagement follows a simple arc, whether you’re a small business or a hospital team:
+      </p>
+      <ul>
+        <li><strong>1. Discovery:</strong> we map your current process and define success clearly.</li>
+        <li><strong>2. Design:</strong> we sketch flows, handoffs, and integrations that respect your reality.</li>
+        <li><strong>3. Build:</strong> we implement, test, and refine using real or sample cases.</li>
+        <li><strong>4. Launch:</strong> we go live with clear docs and training for your team.</li>
+        <li><strong>5. Support:</strong> we stay involved as your needs evolve.</li>
+      </ul>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+        <a
+          href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Services%20Inquiry"
+          class="btn-primary"
+        >
+          Talk to us about a project
+        </a>
+        <a href="pricing.html" class="btn-outline">
+          Review pricing structure
+        </a>
+      </div>
+    </section>
 
     <footer>
-      <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
+      <span>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</span>
+      <span>
+        Not sure which service you need?
+        <a href="bots.html">Compare our bots.</a>
+      </span>
     </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
