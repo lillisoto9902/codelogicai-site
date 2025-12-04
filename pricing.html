@@ -1,712 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css" />
-  <head>
+<head>
   <meta charset="UTF-8" />
   <title>Pricing – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Simple pricing for CodeLogicAI bots and services. Starter, Pro, and Scale plans for lead-gen, healthcare intake, and CFO visibility."
+    content="CodeLogicAI pricing for CRM bots, CareClerk for hospitals and clinics, CFO-style insights bots, and managed hosting."
   />
-
-  <style>
-    :root {
-      --bg: #021430;
-      --bg-alt: #032341;
-      --accent: #1fd4ff;
-      --accent-soft: rgba(31, 212, 255, 0.16);
-      --text: #f9fafb;
-      --muted: #c7d2fe;
-      --danger: #fb7185;
-      --card: rgba(10, 23, 50, 0.96);
-      --border: rgba(148, 163, 184, 0.55);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: radial-gradient(circle at top, #0b2f63 0, #021430 55%, #020617 100%);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 80px;
-    }
-
-    /* Header + logo */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-img {
-      height: 46px;
-      width: auto;
-      border-radius: 6px;
-      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .logo-text span:first-child {
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      font-size: 17px;
-    }
-
-    .logo-text span:last-child {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .header-cta {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 4px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(6, 17, 40, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .dot-green {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
-    }
-
-    /* Nav */
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      font-size: 13px;
-    }
-
-    .nav a {
-      padding: 6px 11px;
-      border-radius: 999px;
-      color: var(--muted);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      background: rgba(12, 20, 48, 0.95);
-    }
-
-    .nav a:hover {
-      color: var(--text);
-      background: rgba(15, 23, 42, 0.98);
-      border-color: rgba(191, 219, 254, 0.9);
-    }
-
-    main { display: block; }
-
-    .section {
-      margin-top: 32px;
-    }
-
-    .section h1 {
-      font-size: clamp(30px, 4vw, 38px);
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .section h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .section p.section-sub {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 16px;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    @media (max-width: 880px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .pricing-grid {
-        grid-template-columns: 1fr;
-      }
-      .compare-grid {
-        grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
-      }
-    }
-
-    .price-card {
-      background: var(--card);
-      border-radius: 18px;
-      border: 1px solid var(--border);
-      padding: 16px 16px 18px;
-      font-size: 13px;
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.6);
-      position: relative;
-    }
-
-    .price-card.highlight {
-      border-color: rgba(56, 189, 248, 0.9);
-      box-shadow: 0 16px 40px rgba(56, 189, 248, 0.5);
-    }
-
-    .badge {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-    }
-
-    .plan-name {
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 4px;
-    }
-
-    .price-tag {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .price-desc {
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .list {
-      margin-top: 6px;
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .list li + li {
-      margin-top: 3px;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-      border-radius: 999px;
-      padding: 9px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition:
-        transform 0.12s ease,
-        box-shadow 0.12s ease,
-        background 0.12s ease,
-        border-color 0.12s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #1fd4ff, #38bdf8);
-      color: #0f172a;
-      box-shadow: 0 12px 26px rgba(56, 189, 248, 0.45);
-      font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 34px rgba(56, 189, 248, 0.6);
-    }
-
-    .btn-secondary {
-      background: rgba(15, 23, 42, 0.96);
-      border-color: rgba(148, 163, 184, 0.75);
-      color: var(--muted);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(15, 23, 42, 0.99);
-      border-color: rgba(191, 219, 254, 0.9);
-    }
-
-    .tagline {
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    .note {
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-
-    .subtle-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    /* Comparison */
-    .compare-grid {
-      display: grid;
-      grid-template-columns: 1.4fr repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 16px;
-      font-size: 12px;
-      border-radius: 14px;
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      overflow: hidden;
-    }
-
-    .compare-header {
-      background: rgba(12, 20, 48, 0.98);
-      font-weight: 600;
-    }
-
-    .compare-row {
-      display: contents;
-    }
-
-    .compare-cell {
-      padding: 8px 10px;
-      border-top: 1px solid rgba(30, 64, 175, 0.5);
-    }
-
-    .compare-cell:first-child {
-      background: rgba(10, 23, 50, 0.85);
-    }
-
-    .compare-header .compare-cell {
-      border-top: none;
-    }
-
-    .check {
-      color: #22c55e;
-      font-weight: 700;
-    }
-
-    .dash {
-      color: rgba(148, 163, 184, 0.8);
-    }
-
-    /* FAQ */
-    details {
-      background: var(--card);
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      padding: 10px 12px;
-      font-size: 13px;
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.5);
-    }
-
-    details + details {
-      margin-top: 8px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 500;
-      list-style: none;
-    }
-
-    summary::-webkit-details-marker {
-      display: none;
-    }
-
-    summary::before {
-      content: "+";
-      display: inline-block;
-      margin-right: 8px;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    details[open] summary::before {
-      content: "–";
-    }
-
-    details p {
-      margin-top: 6px;
-      color: var(--muted);
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 12px;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .footer-links a {
-      font-size: 12px;
-      color: var(--muted);
-      margin-left: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- Shared header -->
   <div class="page">
-
     <header>
       <div class="logo">
-        <img src="assets/Logo.png" alt="CodeLogicAI Logo" class="logo-img">
+        <img src="logo.png" alt="CodeLogicAI logo" class="logo-img" />
         <div class="logo-text">
           <span>CodeLogicAI</span>
-          <span>AI bots for real-world businesses</span>
+          <span>AI bots, CRM automation & training</span>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="bots.html">AI Bots</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a href="blog.html">Blog</a>
-        <a href="careers.html">Careers</a>
-      </nav>
-
-      <div class="header-cta">
-        <div class="pill">
-          <span class="dot-green"></span>
-          <span>Plans sized to your ROI</span>
-        </div>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>
+          <span class="accent">Simple, transparent pricing structure</span>
+        </span>
       </div>
     </header>
+  </div>
 
-    <main>
-      <!-- HERO / INTRO -->
-      <section class="section">
-        <div style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
-          Pricing
-        </div>
-        <h1>Simple plans that grow with your automations.</h1>
-        <p class="section-sub">
-          Start with one core workflow — lead-gen, healthcare intake, or CFO visibility —
-          and upgrade as you add channels, locations, or additional bots. No mystery pricing,
-          no long-term lock-in.
-        </p>
+  <!-- Shared nav -->
+  <div class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"    class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="bots.html"     class="nav-link">Bots</a>
+      <a href="pricing.html"  class="nav-link active">Pricing</a>
+      <a href="blog.html"     class="nav-link">Blog</a>
+      <a href="careers.html"  class="nav-link">Careers</a>
+      <a href="contact.html"  class="nav-link">Contact</a>
+    </nav>
+  </div>
 
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
-          <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Talk through your pricing →
-          </a>
-          <a href="contact.html" class="btn-secondary">
-            Send details & get a custom quote
-          </a>
-        </div>
+  <!-- Page content -->
+  <div class="page">
+    <section class="page-section">
+      <h1>Pricing</h1>
+      <p>
+        CodeLogicAI pricing is designed around how you actually use AI: one clear bot or workflow
+        at a time, with managed hosting and support layered on top.
+      </p>
+      <p>
+        The numbers below are a <strong>structure template</strong> — you can adjust exact amounts,
+        discounts, and payment plans as you finalize your offers.
+      </p>
+    </section>
 
-        <p class="note">
-          Implementation (one-time setup) is quoted separately based on scope. Monthly plans cover hosting, monitoring, and improvements.
-        </p>
-      </section>
+    <!-- Core packages -->
+    <section class="page-section">
+      <h2>Core bot packages</h2>
 
-      <!-- CORE PLANS -->
-      <section class="section">
-        <h2>Core monthly plans</h2>
-        <p class="section-sub">
-          These ranges are typical for most clients. We’ll confirm your exact pricing after a short scoping call.
-        </p>
-
-        <div class="pricing-grid">
-          <div class="price-card">
-            <div class="plan-name">Starter</div>
-            <div class="price-tag">$199–$399/mo</div>
-            <div class="price-desc">For single workflows or one-location setups.</div>
-            <ul class="list">
-              <li>1 core bot (e.g., MiniCRM Lead-Gen or CareClerk lite)</li>
-              <li>Single channel (web chat or SMS/WhatsApp)</li>
-              <li>Basic follow-ups (0–24 hours)</li>
-              <li>MiniCRM or Google Sheets logging</li>
-              <li>Email support</li>
-            </ul>
+      <div class="cards" style="margin-top:14px;">
+        <!-- Starter -->
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <div>
+            <div class="card-title">Starter Bot Package</div>
+            <div class="card-sub">
+              Ideal for a single bot focused on one clear job — like lead capture or basic intake.
+              <ul style="margin-top:8px; padding-left:18px;">
+                <li>1 AI bot (CRM bot or CareClerk-lite, or similar).</li>
+                <li>Custom conversation flow design.</li>
+                <li>Connection to 1–2 tools (calendar, email, or sheet/CRM).</li>
+                <li>Launch support and basic training call.</li>
+                <li>Email support after launch.</li>
+              </ul>
+              <p style="margin-top:8px;">
+                <strong>Structure:</strong> one-time setup fee + monthly hosting/support.
+              </p>
+            </div>
           </div>
-
-          <div class="price-card highlight">
-            <span class="badge">Most popular</span>
-            <div class="plan-name">Pro</div>
-            <div class="price-tag">$300–$900/mo</div>
-            <div class="price-desc">For growing teams who rely on consistent flow.</div>
-            <ul class="list">
-              <li>1–2 bots (e.g., Lead-Gen + CareClerk intake or SummitAI CFO)</li>
-              <li>Multiple channels (web + SMS/WhatsApp, as applicable)</li>
-              <li>Advanced follow-ups (0–72 hours + branching)</li>
-              <li>Calendar & CRM integration (where supported)</li>
-              <li>Monthly performance review & tweaks</li>
-              <li>Priority email support</li>
-            </ul>
-          </div>
-
-          <div class="price-card">
-            <div class="plan-name">Scale</div>
-            <div class="price-tag">$900+/mo</div>
-            <div class="price-desc">For agencies and multi-location operators.</div>
-            <ul class="list">
-              <li>Multi-bot, multi-location configurations</li>
-              <li>Multi-channel messaging (web, SMS/WhatsApp, more)</li>
-              <li>Hold-out tests and A/B experiments</li>
-              <li>Deeper analytics and reporting</li>
-              <li>Optional fractional automation support</li>
-              <li>Priority queue for feature requests</li>
-            </ul>
-          </div>
+          <div class="card-chip">Best for getting started</div>
         </div>
 
-        <p class="tagline">
-          Not sure where you land? We can map your use-case to a plan on a 15-minute call.
-        </p>
-      </section>
-
-      <!-- COMPARISON TABLE -->
-      <section class="section">
-        <h2>Plan comparison</h2>
-        <p class="section-sub">
-          A quick overview of what’s included at each level. Exact details are tailored based on your stack and workflows.
-        </p>
-
-        <div class="compare-grid">
-          <div class="compare-row compare-header">
-            <div class="compare-cell">Feature</div>
-            <div class="compare-cell">Starter</div>
-            <div class="compare-cell">Pro</div>
-            <div class="compare-cell">Scale</div>
+        <!-- Pro -->
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <div>
+            <div class="card-title">Pro Bot Stack</div>
+            <div class="card-sub">
+              For teams ready to automate multiple parts of their workflow and keep everything
+              in sync across tools.
+              <ul style="margin-top:8px; padding-left:18px;">
+                <li>Up to 2–3 coordinated bots (e.g., CRM bot + scheduling + CFO insights).</li>
+                <li>Deeper integrations (CRM, phone/SMS, web chat, shared inbox, etc.).</li>
+                <li>Custom routing, conditions, and business rules.</li>
+                <li>Team training sessions and written playbooks.</li>
+                <li>Priority support and periodic optimization.</li>
+              </ul>
+              <p style="margin-top:8px;">
+                <strong>Structure:</strong> higher setup fee + tiered monthly for hosting,
+                monitoring, and ongoing improvements.
+              </p>
+            </div>
           </div>
-
-          <div class="compare-row">
-            <div class="compare-cell">Core bot(s)</div>
-            <div class="compare-cell">1</div>
-            <div class="compare-cell">1–2</div>
-            <div class="compare-cell">Multi-bot</div>
-          </div>
-
-          <div class="compare-row">
-            <div class="compare-cell">Supported channels</div>
-            <div class="compare-cell">1 (web or SMS)</div>
-            <div class="compare-cell">2+ (web + SMS/WhatsApp)</div>
-            <div class="compare-cell">Multi-channel / custom</div>
-          </div>
-
-          <div class="compare-row">
-            <div class="compare-cell">Follow-ups / nurture</div>
-            <div class="compare-cell">Basic (0–24h)</div>
-            <div class="compare-cell">Advanced (0–72h, branching)</div>
-            <div class="compare-cell">Advanced + experiments</div>
-          </div>
-
-          <div class="compare-row">
-            <div class="compare-cell">Calendar integration</div>
-            <div class="compare-cell"><span class="dash">Optional</span></div>
-            <div class="compare-cell"><span class="check">Included*</span></div>
-            <div class="compare-cell"><span class="check">Included*</span></div>
-          </div>
-
-          <div class="compare-row">
-            <div class="compare-cell">CRM / data destination</div>
-            <div class="compare-cell">MiniCRM / Sheets</div>
-            <div class="compare-cell">MiniCRM, CRM, or Sheets</div>
-            <div class="compare-cell">CRMs, data warehouse, or custom</div>
-          </div>
-
-          <div class="compare-row">
-            <div class="compare-cell">Performance reviews</div>
-            <div class="compare-cell">As-needed</div>
-            <div class="compare-cell">Monthly</div>
-            <div class="compare-cell">Monthly + strategic</div>
-          </div>
-
-          <div class="compare-row">
-            <div class="compare-cell">Support</div>
-            <div class="compare-cell">Email</div>
-            <div class="compare-cell">Priority email</div>
-            <div class="compare-cell">Priority + dedicated contact</div>
-          </div>
+          <div class="card-chip">For growing teams</div>
         </div>
 
-        <p class="note">
-          *Calendar & CRM connections depend on your current tools (e.g., Google Calendar, Outlook, HubSpot, etc.).
-        </p>
-      </section>
-
-      <!-- IMPLEMENTATION COSTS -->
-      <section class="section">
-        <h2>Implementation & setup</h2>
-        <p class="section-sub">
-          Implementation is a one-time project to design your flows, wire up tools, and launch your bot with confidence.
-          It’s priced based on complexity — but here’s what most clients can expect.
-        </p>
-
-        <div class="pricing-grid">
-          <div class="price-card">
-            <div class="plan-name">Single workflow</div>
-            <div class="price-tag">Typically $750–$2,000</div>
-            <div class="price-desc">For one focused bot and one channel.</div>
-            <ul class="list">
-              <li>Discovery & flow mapping</li>
-              <li>Bot conversation design</li>
-              <li>Basic integrations (MiniCRM / Sheets)</li>
-              <li>Test & launch support</li>
-              <li>Quickstart reference guide</li>
-            </ul>
+        <!-- Healthcare / Enterprise -->
+        <div class="card">
+          <div class="card-icon">🏥</div>
+          <div>
+            <div class="card-title">CareClerk & Healthcare Workflows</div>
+            <div class="card-sub">
+              Designed for clinics, hospitals, and healthcare teams where intake, communication,
+              and guardrails really matter.
+              <ul style="margin-top:8px; padding-left:18px;">
+                <li>CareClerk deployment (intake, reminders, FAQs, routing).</li>
+                <li>Multi-location or multi-provider logic if needed.</li>
+                <li>Policy-aware flows and escalation paths.</li>
+                <li>Staff training and usage SOPs.</li>
+                <li>Closer collaboration during rollout and refinement.</li>
+              </ul>
+              <p style="margin-top:8px;">
+                <strong>Structure:</strong> scoped proposal based on sites, volume, and integrations.
+              </p>
+            </div>
           </div>
-
-          <div class="price-card">
-            <div class="plan-name">Multi-workflow</div>
-            <div class="price-tag">Typically $2,000–$5,000+</div>
-            <div class="price-desc">For multi-location or multi-service setups.</div>
-            <ul class="list">
-              <li>Multiple flows (e.g., sales + intake + reminders)</li>
-              <li>Multiple channels and/or locations</li>
-              <li>Deeper integration and routing logic</li>
-              <li>Team training session</li>
-              <li>Launch review at 30 days</li>
-            </ul>
-          </div>
-
-          <div class="price-card">
-            <div class="plan-name">Custom & enterprise</div>
-            <div class="price-tag">Custom quote</div>
-            <div class="price-desc">For unique stacks or higher compliance needs.</div>
-            <ul class="list">
-              <li>Custom process mapping</li>
-              <li>Internal tools and knowledge bases</li>
-              <li>Compliance-aware workflows (e.g., PHI routing)</li>
-              <li>Co-design with your tech/ops teams</li>
-              <li>Roll-out plan & documentation</li>
-            </ul>
-          </div>
+          <div class="card-chip">Healthcare & complex orgs</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FAQ -->
-      <section class="section">
-        <h2>Pricing FAQ</h2>
-        <p class="section-sub">
-          A few common questions that come up before we start.
-        </p>
+    <!-- Hosting & support -->
+    <section class="page-section">
+      <h2>Managed hosting & support</h2>
+      <p>
+        Every bot needs somewhere to live. Instead of forcing you into DevOps, we handle the
+        infrastructure and keep things healthy.
+      </p>
 
-        <div style="display:grid;gap:8px;max-width:900px;">
-          <details>
-            <summary>What’s the difference between implementation and the monthly fee?</summary>
-            <p>
-              Implementation is the one-time project to design, build, and launch your bot:
-              mapping flows, wiring tools, testing, and training. The monthly fee covers
-              hosting, monitoring, and improvements — so your bot doesn’t slowly break as
-              your business changes.
-            </p>
-          </details>
-
-          <details>
-            <summary>Can we start on Starter and move up later?</summary>
-            <p>
-              Yes. Many clients start on Starter for a single workflow, then move to Pro
-              once they see results and want to add more channels, locations, or bots.
-            </p>
-          </details>
-
-          <details>
-            <summary>Do you offer discounts for agencies or multiple locations?</summary>
-            <p>
-              Yes. If you’re rolling out bots across multiple brands or locations, we can
-              create a Scale package that makes sense for your volume and support needs.
-            </p>
-          </details>
-
-          <details>
-            <summary>What if I don’t know which bot or plan I need?</summary>
-            <p>
-              That’s exactly what the 15-minute intro call is for. We’ll talk through your
-              current lead flow, tools, and goals — then recommend a simple starting point
-              or tell you honestly if it’s not the right time.
-            </p>
-          </details>
-
-          <details>
-            <summary>Is there a long-term contract?</summary>
-            <p>
-              Most clients start month-to-month after implementation. If you prefer a
-              longer commitment for better budgeting, we can discuss that too.
-            </p>
-          </details>
+      <div class="cards" style="margin-top:14px;">
+        <div class="card">
+          <div class="card-icon">☁️</div>
+          <div>
+            <div class="card-title">Managed hosting</div>
+            <div class="card-sub">
+              <ul style="margin-top:6px; padding-left:18px;">
+                <li>Secure hosting for your bots and supporting services.</li>
+                <li>Monitoring for uptime and basic health checks.</li>
+                <li>Routine updates when tools or APIs change.</li>
+              </ul>
+              <p style="margin-top:6px;">
+                Typically included as a monthly line item in each package.
+              </p>
+            </div>
+          </div>
+          <div class="card-chip">Included monthly</div>
         </div>
 
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
-          <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Get a tailored quote →
-          </a>
-          <a href="contact.html" class="btn-secondary">
-            Share context by email
-          </a>
+        <div class="card">
+          <div class="card-icon">🛠️</div>
+          <div>
+            <div class="card-title">Support & iteration</div>
+            <div class="card-sub">
+              <ul style="margin-top:6px; padding-left:18px;">
+                <li>Support channel for questions and tweaks.</li>
+                <li>Small flow edits as your business changes.</li>
+                <li>Optional quarterly “tune-up” or review calls.</li>
+              </ul>
+              <p style="margin-top:6px;">
+                Can be bundled with hosting or quoted separately for higher-touch setups.
+              </p>
+            </div>
+          </div>
+          <div class="card-chip">Keeps bots sharp</div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+
+    <!-- Bootcamp -->
+    <section class="page-section">
+      <h2>AI Certification Bootcamp</h2>
+      <p>
+        For owners, staff, and care teams who want to use AI safely and confidently, we offer an
+        AI Certification Bootcamp that pairs perfectly with your bots.
+      </p>
+      <ul>
+        <li>Live or virtual sessions tailored to your industry.</li>
+        <li>Hands-on practice with your own workflows and tools.</li>
+        <li>Prompting, review, and safety best practices.</li>
+        <li>Simple “house rules” for AI use inside your organization.</li>
+      </ul>
+      <p style="margin-top:8px;">
+        <strong>Structure:</strong> per-seat or per-team pricing, plus optional follow-up sessions.
+      </p>
+    </section>
+
+    <!-- How to get a quote -->
+    <section class="page-section">
+      <h2>Get a tailored quote</h2>
+      <p>
+        Because every business and hospital setup is different, final pricing is always confirmed
+        after a short conversation about your:
+      </p>
+      <ul>
+        <li>Type of organization (service business, agency, clinic, hospital, etc.).</li>
+        <li>Expected volume (leads, patients, or conversations per month).</li>
+        <li>Systems we’ll be connecting to (CRM, EHR, phone/SMS, calendars, etc.).</li>
+        <li>How much support and iteration you want from us after launch.</li>
+      </ul>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+        <a
+          href="mailto:codelogicai.llc@gmail.com?subject=CodeLogicAI%20Pricing%20Request"
+          class="btn-primary"
+        >
+          Email us for a quote
+        </a>
+        <a href="contact.html" class="btn-outline">
+          Share your details on the contact page
+        </a>
+      </div>
+    </section>
 
     <footer>
-      <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
+      <span>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</span>
+      <span>
+        Not sure where to start?
+        <a href="bots.html">Compare our bots.</a>
+      </span>
     </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
