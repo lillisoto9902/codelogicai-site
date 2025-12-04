@@ -1,335 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css" />
-  <head>
+<head>
   <meta charset="UTF-8" />
   <title>Careers – CodeLogicAI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Join CodeLogicAI — a small, fast-moving automation studio building AI bots for SMBs, healthcare, and agencies."
+    content="Explore future career opportunities at CodeLogicAI – a boutique AI studio building CRM bots, CareClerk for hospitals, and AI-powered automation."
   />
-
-  <style>
-    :root {
-      --bg: #021430;
-      --bg-alt: #032341;
-      --accent: #1fd4ff;
-      --accent-soft: rgba(31, 212, 255, 0.18);
-      --text: #f9fafb;
-      --muted: #c7d2fe;
-      --card: rgba(10, 23, 50, 0.96);
-      --border: rgba(148, 163, 184, 0.45);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    }
-
-    body {
-      background: radial-gradient(circle at top, #0c3570 0, #021430 55%, #020617 100%);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 24px 16px 80px;
-    }
-
-    /* Header */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 40px;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo-img {
-      height: 46px;
-      width: auto;
-      border-radius: 6px;
-      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
-    }
-
-    .logo-text span:first-child {
-      font-weight: 700;
-      font-size: 17px;
-      letter-spacing: 0.03em;
-    }
-
-    .logo-text span:last-child {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .nav a {
-      padding: 6px 11px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: var(--muted);
-      border: 1px solid rgba(148,163,184,0.45);
-      background: rgba(12,20,48,0.95);
-    }
-
-    .nav a:hover {
-      background: rgba(15,23,42,1);
-      color: var(--text);
-      border-color: rgba(191,219,254,0.9);
-    }
-
-    /* Sections */
-    .section {
-      margin-top: 36px;
-    }
-
-    .section h1 {
-      font-size: clamp(30px, 4vw, 38px);
-      margin-bottom: 10px;
-      line-height: 1.1;
-    }
-
-    .section h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .section-sub {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 16px;
-    }
-
-    /* Cards */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    @media (max-width: 760px) {
-      .card-grid { grid-template-columns: 1fr; }
-    }
-
-    .card {
-      background: var(--card);
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      padding: 16px 16px 18px;
-      box-shadow: 0 10px 22px rgba(15,23,42,0.6);
-    }
-
-    .card h3 {
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    .card p {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 16px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #1fd4ff, #38bdf8);
-      color: #0f172a;
-      font-weight: 600;
-      box-shadow: 0 12px 26px rgba(56,189,248,0.45);
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 34px rgba(56,189,248,0.6);
-    }
-
-    footer {
-      margin-top: 40px;
-      display: flex;
-      justify-content: space-between;
-      color: var(--muted);
-      font-size: 12px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      margin-left: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <!-- Shared header -->
   <div class="page">
-
     <header>
       <div class="logo">
-        <img src="assets/Logo.png" class="logo-img" alt="CodeLogicAI Logo">
+        <img src="logo.png" alt="CodeLogicAI logo" class="logo-img" />
         <div class="logo-text">
           <span>CodeLogicAI</span>
-          <span>AI bots for real-world businesses</span>
+          <span>AI bots, CRM automation & training</span>
         </div>
       </div>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="bots.html">AI Bots</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a href="blog.html">Blog</a>
-        <a href="careers.html">Careers</a>
-      </nav>
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>
+          <span class="accent">Careers at CodeLogicAI</span>
+        </span>
+      </div>
     </header>
+  </div>
 
-    <main>
-      <!-- HERO -->
-      <section class="section">
-        <div style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
-          Careers
-        </div>
-        <h1>Build the future of small-business automation.</h1>
-        <p class="section-sub">
-          CodeLogicAI is a tiny but fast-growing automation studio working across lead-gen,
-          healthcare, scheduling, and financial insights. We build bots that directly impact
-          the day-to-day operations of real businesses — not theoretical AI demos.
-        </p>
-      </section>
+  <!-- Shared nav -->
+  <div class="nav-wrapper">
+    <nav class="nav">
+      <a href="index.html"    class="nav-link">Home</a>
+      <a href="about.html"    class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="bots.html"     class="nav-link">Bots</a>
+      <a href="pricing.html"  class="nav-link">Pricing</a>
+      <a href="blog.html"     class="nav-link">Blog</a>
+      <a href="careers.html"  class="nav-link active">Careers</a>
+      <a href="contact.html"  class="nav-link">Contact</a>
+    </nav>
+  </div>
 
-      <!-- ABOUT WORKING HERE -->
-      <section class="section">
-        <h2>What it’s like to work at CodeLogicAI</h2>
-        <p class="section-sub">
-          We’re low-ego, fast-moving, and focused on useful automation. No bloated teams,
-          no endless meetings — just shipping meaningful work.
-        </p>
+  <!-- Page content -->
+  <div class="page">
+    <section class="page-section">
+      <h1>Careers at CodeLogicAI</h1>
+      <p>
+        CodeLogicAI is a small, focused studio building AI systems that actually help people:
+        bots that catch leads, support patients, and give owners real visibility into their work.
+      </p>
+      <p>
+        We’re not hiring at scale, but we are always paying attention to people who
+        understand both <strong>technology</strong> and <strong>real-world operations</strong> —
+        especially in small business and healthcare.
+      </p>
+    </section>
 
-        <ul style="padding-left:18px;font-size:13px;color:var(--muted);">
-          <li>Fully remote (US-based preferred)</li>
-          <li>Work directly with founders & clients</li>
-          <li>Clear ownership and rapid iteration cycles</li>
-          <li>Hands-on with LLMs, workflows, and integrations</li>
-          <li>Flexible hours — results > time logged</li>
-        </ul>
-      </section>
+    <section class="page-section">
+      <h2>Who we love working with</h2>
+      <p>
+        You don’t have to check every box, but if some of these sound like you,
+        you’re probably our kind of person:
+      </p>
+      <ul>
+        <li>You care about outcomes, not just shiny tools or hype.</li>
+        <li>You’re comfortable talking to owners, admins, or care teams in plain language.</li>
+        <li>You enjoy mapping messy processes and turning them into clear flows.</li>
+        <li>You’re curious about AI and automation and willing to learn quickly.</li>
+        <li>You document what you do so others can rely on it after you.</li>
+      </ul>
+    </section>
 
-      <!-- OPEN ROLES -->
-      <section class="section">
-        <h2>Open Roles</h2>
-        <p class="section-sub">We’re building a small, senior generalist team. If you see yourself here, apply.</p>
+    <section class="page-section">
+      <h2>Example roles as we grow</h2>
+      <p>
+        We’re still early, but these are the types of roles we expect to add over time:
+      </p>
+      <ul>
+        <li><strong>Bot implementation specialist</strong> – set up and configure bots for clients.</li>
+        <li><strong>Client success & onboarding</strong> – help businesses and clinics adopt their new workflows.</li>
+        <li><strong>Technical writer / trainer</strong> – create guides, SOPs, and training for teams.</li>
+        <li><strong>Backend or automation engineer</strong> – connect bots to CRMs, EHRs, and internal systems.</li>
+        <li><strong>Healthcare workflow specialist</strong> – help design safe, realistic CareClerk flows.</li>
+      </ul>
+      <p>
+        Most roles are remote-friendly with strong written communication and async collaboration.
+      </p>
+    </section>
 
-        <div class="card-grid">
+    <section class="page-section">
+      <h2>How to introduce yourself</h2>
+      <p>
+        If you’d like to be considered for future opportunities, you can send:
+      </p>
+      <ul>
+        <li>Your resume or LinkedIn profile.</li>
+        <li>A short note about the kind of work you want to do.</li>
+        <li>Any examples of projects, automations, documentation, or systems you’ve helped build.</li>
+      </ul>
+      <p>
+        Email everything to:
+        <a href="mailto:codelogicai.llc@gmail.com?subject=Careers%20at%20CodeLogicAI">
+          codelogicai.llc@gmail.com
+        </a>
+        with the subject line <strong>“Careers at CodeLogicAI”</strong>.
+      </p>
+      <p>
+        If there’s a strong fit, we’ll keep your information on file and reach out
+        as roles open up.
+      </p>
 
-          <div class="card">
-            <h3>Automation Engineer (LLM + Integrations)</h3>
-            <p>
-              Build flows, integrations, and conversational logic using OpenAI, FastAPI,
-              Zapier, Make, and custom webhooks.
-            </p>
-            <a href="mailto:careers@codelogicai.org?subject=Automation%20Engineer%20Application" class="btn-primary">
-              Apply Now →
-            </a>
-          </div>
-
-          <div class="card">
-            <h3>Frontend Developer (Web + Dashboard)</h3>
-            <p>
-              Work on client dashboards, admin utilities, and lightweight interfaces
-              using HTML/CSS/JS and optional React.
-            </p>
-            <a href="mailto:careers@codelogicai.org?subject=Frontend%20Developer%20Application" class="btn-primary">
-              Apply Now →
-            </a>
-          </div>
-
-          <div class="card">
-            <h3>Bot Conversation Designer</h3>
-            <p>
-              Craft conversational flows, qualification logic, and friendly scripts
-              that convert leads reliably across industries.
-            </p>
-            <a href="mailto:careers@codelogicai.org?subject=Conversation%20Designer%20Application" class="btn-primary">
-              Apply Now →
-            </a>
-          </div>
-
-          <div class="card">
-            <h3>Client Success Lead</h3>
-            <p>
-              Own onboarding, training, updates, and client wins. Help businesses get real
-              ROI from their automations.
-            </p>
-            <a href="mailto:careers@codelogicai.org?subject=Client%20Success%20Application" class="btn-primary">
-              Apply Now →
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- GENERAL APPLICATION -->
-      <section class="section">
-        <h2>Don’t see the right role?</h2>
-        <p class="section-sub">
-          We’re always meeting talented builders, especially those with small-team energy.
-          If you want to be part of our early crew, send your background.
-        </p>
-
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
         <a
-          href="mailto:careers@codelogicai.org?subject=General%20Application"
+          href="mailto:codelogicai.llc@gmail.com?subject=Careers%20at%20CodeLogicAI"
           class="btn-primary"
         >
-          Send a general application →
+          Send your info
         </a>
-      </section>
-
-    </main>
+        <a href="blog.html" class="btn-outline">
+          Learn more about what we’re building
+        </a>
+      </div>
+    </section>
 
     <footer>
-      <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
+      <span>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</span>
+      <span>
+        Not ready to apply yet?
+        <a href="blog.html">Follow along on the blog.</a>
+      </span>
     </footer>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
