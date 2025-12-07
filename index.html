@@ -2,36 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CodeLogicAI – AI Bots for Leads, Healthcare & CFO Insights</title>
+  <title>CodeLogicAI – Practical AI Bots for Real Businesses</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="CodeLogicAI builds practical AI bots for lead capture, healthcare intake, and owner-level financial clarity."
+    content="AI bots for lead capture, scheduling, healthcare intake, and financial visibility — built for real-world small businesses."
   />
   <link rel="stylesheet" href="style.css" />
 
   <style>
+    /* LIGHT THEME */
     :root {
-      --bg: #021430;
-      --bg-alt: #032341;
-      --accent: #1fd4ff;
-      --accent-soft: rgba(31, 212, 255, 0.16);
-      --text: #f9fafb;
-      --muted: #c7d2fe;
-      --danger: #fb7185;
-      --card: rgba(10, 23, 50, 0.96);
-      --border: rgba(148, 163, 184, 0.55);
+      --bg: #ffffff;
+      --bg-alt: #f4f6f9;
+      --accent: #0077ff;
+      --accent-soft: rgba(0,119,255,0.09);
+      --text: #1d1d1f;
+      --muted: #555;
+      --card: #ffffff;
+      --border: #d9d9d9;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     body {
-      background: radial-gradient(circle at top, #0b2f63 0, #021430 55%, #020617 100%);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
@@ -45,39 +45,31 @@
       padding: 24px 16px 80px;
     }
 
-    /* Header + logo */
+    /* HEADER */
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      align-items: center;
       margin-bottom: 40px;
       flex-wrap: wrap;
+      gap: 16px;
     }
 
     .logo {
       display: flex;
-      align-items: center;
       gap: 12px;
+      align-items: center;
     }
 
     .logo-img {
-      height: 46px;
-      width: auto;
+      width: 48px;
+      height: auto;
       border-radius: 6px;
-      box-shadow: 0 0 18px rgba(31, 212, 255, 0.6);
-    }
-
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.2;
     }
 
     .logo-text span:first-child {
       font-weight: 700;
-      letter-spacing: 0.03em;
-      font-size: 17px;
+      font-size: 18px;
     }
 
     .logo-text span:last-child {
@@ -85,173 +77,117 @@
       color: var(--muted);
     }
 
-    .header-cta {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 4px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(6, 17, 40, 0.9);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .dot-green {
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
-    }
-
-    /* Nav */
+    /* NAVIGATION */
     .nav {
       display: flex;
-      flex-wrap: wrap;
       gap: 10px;
-      font-size: 13px;
+      flex-wrap: wrap;
     }
 
     .nav a {
-      padding: 6px 11px;
+      padding: 6px 12px;
       border-radius: 999px;
-      color: var(--muted);
-      border: 1px solid rgba(148, 163, 184, 0.45);
-      background: rgba(12, 20, 48, 0.95);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text);
     }
 
     .nav a:hover {
-      color: var(--text);
-      background: rgba(15, 23, 42, 0.98);
-      border-color: rgba(191, 219, 254, 0.9);
+      background: var(--accent-soft);
+      border-color: var(--accent);
     }
 
-    main { display: block; }
+    /* BUTTONS */
+    .btn-primary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
 
+    .btn-secondary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    /* SECTIONS */
     .section {
       margin-top: 32px;
     }
 
     .section h1 {
-      font-size: clamp(30px, 4vw, 38px);
-      line-height: 1.1;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 8px;
     }
 
     .section h2 {
       font-size: 22px;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
-    .section p.section-sub {
-      font-size: 14px;
+    .section-sub {
       color: var(--muted);
-      margin-bottom: 16px;
+      font-size: 14px;
+      margin-bottom: 14px;
     }
 
-    /* Grids & cards */
+    /* CARDS */
     .grid-3 {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 18px;
-      margin-top: 16px;
+      margin-top: 14px;
     }
 
-    @media (max-width: 880px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .grid-3,
-      .grid-2 {
+    @media (max-width: 860px) {
+      .grid-3, .grid-2 {
         grid-template-columns: 1fr;
       }
     }
 
     .card {
       background: var(--card);
-      border-radius: 16px;
+      padding: 18px;
+      border-radius: 14px;
       border: 1px solid var(--border);
-      padding: 14px 14px 16px;
-      font-size: 13px;
-      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.6);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+      font-size: 14px;
     }
 
     .card h3 {
-      font-size: 15px;
       margin-bottom: 6px;
+      font-size: 17px;
+      font-weight: 600;
     }
 
     .pill-row {
       display: flex;
-      flex-wrap: wrap;
       gap: 6px;
-      margin-top: 6px;
+      margin-top: 10px;
+      flex-wrap: wrap;
     }
 
     .pill-row span {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 999px;
       font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(7, 19, 42, 0.95);
-      border: 1px solid rgba(148, 163, 184, 0.75);
       color: var(--muted);
-    }
-
-    /* Buttons */
-    .btn-primary,
-    .btn-secondary {
-      border-radius: 999px;
-      padding: 9px 16px;
-      font-size: 14px;
-      font-weight: 500;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition:
-        transform 0.12s ease,
-        box-shadow 0.12s ease,
-        background 0.12s ease,
-        border-color 0.12s ease;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #1fd4ff, #38bdf8);
-      color: #0f172a;
-      box-shadow: 0 12px 26px rgba(56, 189, 248, 0.45);
-      font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 34px rgba(56, 189, 248, 0.6);
-    }
-
-    .btn-secondary {
-      background: rgba(15, 23, 42, 0.96);
-      border-color: rgba(148, 163, 184, 0.75);
-      color: var(--muted);
-    }
-
-    .btn-secondary:hover {
-      background: rgba(15, 23, 42, 0.99);
-      border-color: rgba(191, 219, 254, 0.9);
     }
 
     footer {
@@ -260,15 +196,7 @@
       color: var(--muted);
       display: flex;
       justify-content: space-between;
-      gap: 10px;
       flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .footer-links a {
-      font-size: 12px;
-      color: var(--muted);
-      margin-left: 10px;
     }
   </style>
 </head>
@@ -279,7 +207,7 @@
     <!-- HEADER -->
     <header>
       <div class="logo">
-        <img src="assets/Logo.png" alt="CodeLogicAI Logo" class="logo-img">
+        <img src="assets/Logo.png" class="logo-img" alt="CodeLogicAI Logo">
         <div class="logo-text">
           <span>CodeLogicAI</span>
           <span>AI bots for real-world businesses</span>
@@ -296,135 +224,72 @@
         <a href="blog.html">Blog</a>
         <a href="careers.html">Careers</a>
       </nav>
-
-      <div class="header-cta">
-        <div class="pill">
-          <span class="dot-green"></span>
-          <span>Owner-led automations, not generic SaaS</span>
-        </div>
-      </div>
     </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="section">
-        <div style="font-size:13px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">
-          AI that matches your real workflow
-        </div>
-        <h1>AI bots that book, support, and report — without breaking your team.</h1>
-        <p class="section-sub">
-          CodeLogicAI builds practical automations for small businesses, healthcare teams, and operators who
-          want fewer manual tasks, cleaner data, and clearer decisions — not another dashboard to ignore.
-        </p>
+    <!-- HERO -->
+    <section class="section">
+      <h1>AI automations that support your team — not overwhelm them.</h1>
+      <p class="section-sub">
+        CodeLogicAI builds lead bots, healthcare intake systems, and CFO assistants for businesses who just want clear workflows and clean data.
+      </p>
 
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
-          <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Book a 15-min intro call →
-          </a>
-          <a href="services.html" class="btn-secondary">
-            Explore our services
-          </a>
-        </div>
-      </section>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+        <a href="https://cal.com/your-handle/15min" class="btn-primary">Book a Call →</a>
+        <a href="services.html" class="btn-secondary">View Services</a>
+      </div>
+    </section>
 
-      <!-- WHAT WE BUILD -->
-      <section class="section">
-        <h2>What we build</h2>
-        <p class="section-sub">
-          Start with one focused bot or roll out a full stack across leads, care, and finances.
-        </p>
+    <!-- WHAT WE BUILD -->
+    <section class="section">
+      <h2>What We Build</h2>
+      <p class="section-sub">Choose one focused bot — or stack them together for a full system.</p>
 
-        <div class="grid-3">
-          <!-- Card 1: updated text -->
-          <div class="card">
-            <h3>MiniCRM Lead Bot</h3>
-            <p>
-              Qualifies leads, books appointments, and syncs clean data into your CRM bot so follow-up actually happens.
-            </p>
-            <div class="pill-row">
-              <span>Leads</span>
-              <span>Booking</span>
-              <span>Follow-ups</span>
-            </div>
-          </div>
+      <div class="grid-3">
 
-          <!-- Card 2 -->
-          <div class="card">
-            <h3>CareClerk (Healthcare)</h3>
-            <p>
-              Patient intake, FAQs, reminders, and smart routing that respects your policies and keeps staff in the loop.
-            </p>
-            <div class="pill-row">
-              <span>Intake</span>
-              <span>Reminders</span>
-              <span>Secure routing</span>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="card">
-            <h3>SummitAI CFO</h3>
-            <p>
-              Plain-language financial summaries, simple “what-if” checks, and owner-friendly visibility into your cashflow.
-            </p>
-            <div class="pill-row">
-              <span>Cashflow</span>
-              <span>Forecasting</span>
-              <span>Alerts</span>
-            </div>
+        <!-- CARD 1 UPDATED -->
+        <div class="card">
+          <h3>MiniCRM Lead Bot</h3>
+          <p>Qualifies leads, books appointments, and syncs clean data into your CRM bot — so follow-up actually happens.</p>
+          <div class="pill-row">
+            <span>Leads</span><span>Booking</span><span>Follow-ups</span>
           </div>
         </div>
-      </section>
 
-      <!-- WHY BUSINESSES CHOOSE US -->
-      <section class="section">
-        <h2>Why businesses choose CodeLogicAI</h2>
-        <p class="section-sub">
-          We care more about your outcomes than about shipping a flashy demo.
-        </p>
-
-        <div class="grid-2">
-          <div class="card">
-            <h3>Built around your ops</h3>
-            <p>
-              We map your real process first — how leads come in, how patients reach you, how money flows — then
-              design bots that support it, not fight it.
-            </p>
-          </div>
-
-          <div class="card">
-            <h3>Training & ownership</h3>
-            <p>
-              We document flows, create playbooks, and (when you want it) layer in AI Certification Bootcamps so your
-              team understands what’s automated and what isn’t.
-            </p>
+        <div class="card">
+          <h3>CareClerk (Healthcare)</h3>
+          <p>Patient intake, reminders, rescheduling, and PHI-aware routing that keeps your staff in control.</p>
+          <div class="pill-row">
+            <span>Intake</span><span>Reminders</span><span>Secure routing</span>
           </div>
         </div>
-      </section>
 
-      <!-- CTA -->
-      <section class="section">
-        <h2>Want to see what a bot could do for you?</h2>
-        <p class="section-sub">
-          One short call is usually enough to sketch your best first automation — or confirm you don’t need one yet.
-        </p>
-
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;">
-          <a href="https://cal.com/your-handle/15min" class="btn-primary">
-            Book a call →
-          </a>
-          <a href="contact.html" class="btn-secondary">
-            Send us your details
-          </a>
+        <div class="card">
+          <h3>SummitAI CFO</h3>
+          <p>Cashflow summaries, financial snapshots, and simple what-if scenarios that help owners make smarter decisions.</p>
+          <div class="pill-row">
+            <span>Cashflow</span><span>Forecasting</span><span>Alerts</span>
+          </div>
         </div>
-      </section>
-    </main>
 
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <h2>See what a bot could do for you</h2>
+      <p class="section-sub">One short call is enough to map your best first automation.</p>
+
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+        <a href="https://cal.com/your-handle/15min" class="btn-primary">Book a Call →</a>
+        <a href="contact.html" class="btn-secondary">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-      <div>© <span id="year"></span> CodeLogicAI LLC. All rights reserved.</div>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
+      <div>© <span id="year"></span> CodeLogicAI LLC</div>
+      <div>
+        <a href="#">Privacy</a> • <a href="#">Terms</a>
       </div>
     </footer>
   </div>
