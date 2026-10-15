@@ -179,6 +179,7 @@ h1 {
 .gradient-text {
   background: linear-gradient(to right, #0284c7, #0ea5e9);
   -webkit-background-clip: text;
+background-clip: text;
   color: transparent;
 }
 

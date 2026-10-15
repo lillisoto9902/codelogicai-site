@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMS Consent | CodeLogicAI</title>
+  <meta name="description"
+        content="CodeLogicAI SMS messaging information and consent disclosures.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #f4f6f9;
+      color: #1d1d1f;
+      line-height: 1.7;
+    }
+    .consent-container {
+      max-width: 850px;
+      margin: 45px auto;
+      padding: 36px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 14px;
+    }
+    h1 { margin-bottom: 12px; }
+    h2 { margin-top: 28px; margin-bottom: 10px; }
+    p { margin-bottom: 14px; }
+    a { color: #0077cc; text-decoration: underline; }
+    .note { color: #555; font-size: 14px; }
+    .notice {
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      background: #f8fafc;
+      padding: 16px;
+      margin: 20px 0;
+    }
+    .consent-option {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 18px 0;
+    }
+    .consent-option input {
+      margin-top: 7px;
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+    .consent-option label { font-size: 15px; }
+    button {
+      background: #0077cc;
+      color: white;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 8px;
+    }
+    button:disabled {
+      background: #777;
+      cursor: not-allowed;
+    }
+    @media(max-width:600px) {
+      .consent-container {
+        margin: 15px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="consent-container">
+    <header>
+      <strong>CodeLogicAI</strong>
+      <p class="note">SotoALJJ LLC d/b/a CodeLogicAI</p>
+      <nav aria-label="Page navigation">
+        <a href="index.html">Home</a> |
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>SMS Messaging Information</h1>
+      <p class="note">
+        Non-promotional appointment and customer-service communications
+      </p>
+
+      <div class="notice" role="status">
+        <strong>Enrollment is not currently available.</strong>
+        <p>
+          This page explains our intended messaging program.
+          SMS enrollment will become available only after
+          the required registration and technical safeguards
+          are completed.
+        </p>
+      </div>
+
+      <h2>Messaging Program</h2>
+      <p>
+        CodeLogicAI, operated by SotoALJJ LLC, may offer
+        non-promotional text messaging for appointment
+        confirmations, reminders, scheduling updates,
+        cancellation or rescheduling information,
+        and related customer-service communications.
+      </p>
+      <p>
+        Message frequency varies. Message and data rates
+        may apply. Reply STOP to opt out or HELP for help.
+        SMS consent is optional and is not a condition
+        of purchasing services.
+      </p>
+
+      <h2>Consent Preview</h2>
+      <p class="note">
+        The following controls illustrate the proposed
+        consent process. They do not collect or record
+        consent and do not enroll you in SMS messaging.
+      </p>
+
+      <div class="consent-option">
+        <input type="checkbox" id="terms-preview" disabled>
+        <label for="terms-preview">
+          I agree to the
+          <a href="terms.html">Terms of Service</a>
+          and acknowledge the
+          <a href="privacy.html">Privacy Policy</a>.
+        </label>
+      </div>
+
+      <div class="consent-option">
+        <input type="checkbox" id="sms-preview" disabled>
+        <label for="sms-preview">
+          I agree to receive non-promotional appointment
+          and customer-service text messages from
+          SotoALJJ LLC d/b/a CodeLogicAI.
+          Message frequency varies. Message and data
+          rates may apply. Reply STOP to opt out
+          or HELP for assistance.
+          Consent is optional and is not a condition
+          of purchase.
+        </label>
+      </div>
+
+      <button type="button" disabled>
+        SMS Enrollment Unavailable
+      </button>
+
+      <p class="note">
+        No information is transmitted, stored,
+        or submitted through this preview.
+      </p>
+
+      <h2>Questions?</h2>
+      <p>
+        Visit our <a href="contact.html">Contact page</a>
+        for customer-support information.
+      </p>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 SotoALJJ LLC d/b/a CodeLogicAI.
+        All rights reserved.
+      </p>
+      <p>
+        <a href="privacy.html">Privacy</a> |
+        <a href="terms.html">Terms</a> |
+        <a href="index.html">Home</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
